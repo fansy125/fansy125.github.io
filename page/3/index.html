@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.j516.cn">
-  <title>laydate日期插件 | fansy</title>
+  <title>fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789101.引入laydate.js2.&amp;lt;input type=&quot;text&quot; class=&quot;demo-input&quot; placeholder=&quot;请选择日期&quot; id=&quot;test1&quot;&amp;gt;3. &#x2F;&#x2F;执行一个laydate实例    laydate.render(&amp;#123;      elem: &amp;apos;#test1&amp;apos;,      trigger: &amp;apos;click&amp;apos;,&#x2F;&#x2F;采用click弹出">
-<meta name="keywords" content="laydate日期插件">
-<meta property="og:type" content="article">
-<meta property="og:title" content="laydate日期插件">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;10&#x2F;23&#x2F;laydate%E6%97%A5%E6%9C%9F%E6%8F%92%E4%BB%B6&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="fansy">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;page&#x2F;3&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="123456789101.引入laydate.js2.&amp;lt;input type=&quot;text&quot; class=&quot;demo-input&quot; placeholder=&quot;请选择日期&quot; id=&quot;test1&quot;&amp;gt;3. &#x2F;&#x2F;执行一个laydate实例    laydate.render(&amp;#123;      elem: &amp;apos;#test1&amp;apos;,      trigger: &amp;apos;click&amp;apos;,&#x2F;&#x2F;采用click弹出">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-23T08:56:11.829Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -143,27 +139,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-laydate日期插件" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-文档编写部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      laydate日期插件
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/18/%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E9%83%A8%E7%BD%B2/">文档编写部署</a>
     </h1>
   
 
         
-        <a href="/2019/10/23/laydate%E6%97%A5%E6%9C%9F%E6%8F%92%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2019-10-23T08:50:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+        <a href="/2019/10/18/%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2019-10-18T05:12:17.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.引入laydate.js</span><br><span class="line">2.&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> class=<span class="string">"demo-input"</span> placeholder=<span class="string">"请选择日期"</span> id=<span class="string">"test1"</span>&gt;</span><br><span class="line">3. //执行一个laydate实例</span><br><span class="line">    laydate.render(&#123;</span><br><span class="line">      elem: <span class="string">'#test1'</span>,</span><br><span class="line">      trigger: <span class="string">'click'</span>,//采用click弹出</span><br><span class="line">      <span class="keyword">done</span>: <span class="keyword">function</span> (value) &#123;</span><br><span class="line">        console.log(value); //得到日期生成的值，如：2017-08-18</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+        <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">图片 ![image](https://img1.gtimg.com/10/1048/104857/10485731_980x1200_0.jpg)</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
       
 
       
@@ -171,19 +182,12 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">laydate</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/18/%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E9%83%A8%E7%BD%B2/">展开全文 >></a>
+        </p>
       
 
       
@@ -191,27 +195,6 @@
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/10/23/js%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js编码解码
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/10/23/Sublime%20Text3%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Sublime Text3安装以及简单配置</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -231,14 +214,12 @@
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
@@ -261,8 +242,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
