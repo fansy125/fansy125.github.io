@@ -91,7 +91,7 @@
 </div>
 <audio id="media" src="" autoplay="autoplay" onended="playMusic(1,0)"></audio>
 		
-<div style="width:100%;position: absolute;left: 0;bottom: 0;text-align: center;font-weight: bold;background-color: #eaeaea;padding-bottom: 1%;">
+<div style="width:100%;position: absolute;left: 0;bottom: 0;text-align: center;font-weight: bold;">
     <p id="musicTitle"></p>
     <!-- <p id="currTime" >当前：00:00:00</p>
     <p id="totalTime" >时长：00:00:00</p> -->
@@ -114,6 +114,9 @@ li{background: transparent!important;}
 border: 1px solid #ccc;
 background-color: #fff;
 border-radius: 10px;
+}
+#musicTitle{
+  background-image: radial-gradient(#35ecea, #000);
 }
 </style>
  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -500,11 +503,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,11 +531,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
