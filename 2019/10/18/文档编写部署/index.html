@@ -123,7 +123,7 @@ border-radius: 10px;
 	<script>
     //音乐资源
     var myMusics = new Array(
-      { src: "https://www.j516.cn/img/SeeYouAgain.mp3", title: "See You Again" },
+      { src: "https://www.j516.cn/img/SeeYouAgain.mp3", Ttitle: "See You Again" },
     );
     //数组下标
     var index = -1;
@@ -133,7 +133,7 @@ border-radius: 10px;
     function createBox() {
       var html = "";
       for (var i = 0; i < myMusics.length; i++) {
-        html += "<li>" + (i + 1) + "  <a href='javascript:clickName(" + i + ");'>" + myMusics[i].title + "</a></li>"
+        html += "<li>" + (i + 1) + "  <a href='javascript:clickName(" + i + ");'>" + myMusics[i].Ttitle + "</a></li>"
       }
       return html
     }
@@ -231,8 +231,8 @@ border-radius: 10px;
       //音乐播放
       $("#media").play;
       //显示音乐名称
-      $("#musicTitle").text(myMusics[index].title);
-      $("title").text(myMusics[index].title);
+      $("#musicTitle").text(myMusics[index].Ttitle);
+      // $("title").text(myMusics[index].title);
       //重置li列表背景色
       $("#box").children("li").css("background-color", "#FFFFFF");
       $("#box").children("li").css("font-weight", "normal");
@@ -503,19 +503,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -531,7 +523,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,11 +539,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
             
             <div class="clearfix"></div>
