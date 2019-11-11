@@ -325,6 +325,225 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Swiper设置slideToClickedSlide没效果" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/">Swiper设置slideToClickedSlide没效果</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/" class="archive-article-date">
+  	<time datetime="2019-11-11T07:57:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">slideToClickedSlide设置为<span class="literal">true</span>则点击slide会过渡到这个slide</span><br><span class="line">&lt;script language=<span class="string">"javascript"</span>&gt; </span><br><span class="line">  var mySwiper = new Swiper(<span class="string">'.swiper-container'</span>,&#123;</span><br><span class="line">    slideToClickedSlide: <span class="literal">true</span>,</span><br><span class="line">    centeredSlides : <span class="literal">true</span>,</span><br><span class="line">    slidesPerView : 3,</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">父元素swiper设置effect : <span class="string">'fade'</span>,会默认pointer-events: none;</span><br><span class="line">单独设置pointer-events: auto;</span><br><span class="line"></span><br><span class="line">链接：https://www.swiper.com.cn/api/clicks/207.html</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swiper</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Md5签名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/">Md5签名</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/" class="archive-article-date">
+  	<time datetime="2019-11-11T07:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html与后端接口访问，为了简单的安全验证，需要做一下签名处理</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">    &lt;title&gt;MD5签名&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script src=<span class="string">"./jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"./md5.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var userId = <span class="string">'0b44baa65b90727f015b9076a38a0001'</span>;</span><br><span class="line">        var timestamp = <span class="string">'1558494714737'</span></span><br><span class="line">        var t1 = userId + timestamp;</span><br><span class="line">        var s1 = $.md5(t1);</span><br><span class="line">        console.log(s1);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">链接：https://jayden.matchcess.com/2019/11/07/java/md5/Java%E5%92%8CJquery%20Md5%E5%81%9A%E6%8E%A5%E5%8F%A3%E7%AD%BE%E5%90%8D/<span class="comment">#more</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Md5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-H5视频全屏播放" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">H5视频全屏播放</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/" class="archive-article-date">
+  	<time datetime="2019-11-11T07:40:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;div class=<span class="string">"homeVideo_box"</span>&gt;</span><br><span class="line">    &lt;video class=<span class="string">"homeVideo_video"</span> id=<span class="string">"homeVideo_video"</span> webkit-playsinline=<span class="string">"true"</span> x5-video-player-type=<span class="string">"h5"</span></span><br><span class="line">        x5-video-player-fullscreen=<span class="string">"true"</span> playsinline=<span class="string">"true"</span> preload=<span class="string">"auto"</span> src=<span class="string">"音乐路径"</span></span><br><span class="line">        poster=<span class="string">"images/sleepVideo_img1.png"</span>&gt;&lt;/video&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_play abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/sleepVideo_play.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_jump abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/homeVideo_jump.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">/* 开始视频homeVideo */</span><br><span class="line">.homeVideo_box&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 9;overflow: hidden;background: <span class="comment">#000;&#125;</span></span><br><span class="line">.homeVideo_video&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;&#125;</span><br><span class="line">.homeVideo_play&#123;width: 20%;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);&#125;</span><br><span class="line">.homeVideo_jump&#123;width: 18%;right: 5%;top: 4%;&#125;</span><br><span class="line">video&#123;object-fit: fill;object-position: center center;&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">/* 开始视频 */</span><br><span class="line">$(<span class="string">".homeVideo_play"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_play"</span>).hide();</span><br><span class="line">    $(<span class="string">".homeVideo_video"</span>)[0].play();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 开始视频播放完 */</span><br><span class="line">var homeVideo_video = document.getElementById(<span class="string">"homeVideo_video"</span>);</span><br><span class="line">homeVideo_video.onended = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/* 点击跳过视频 */</span><br><span class="line">$(<span class="string">".homeVideo_jump"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">video</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -842,225 +1061,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-window-onbeforeunload" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/25/window-onbeforeunload/">window.onbeforeunload</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/25/window-onbeforeunload/" class="archive-article-date">
-  	<time datetime="2019-10-25T08:25:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ajax请求发送期间，如果用户刷新浏览器可能会导致数据保存失败。需要阻止页面刷新，这时可以通过监听页面window.onbeforeunload事件函数来处理。</span><br><span class="line">window.onbeforeunload = <span class="keyword">function</span> (e) &#123;</span><br><span class="line">	var dialogText = <span class="string">'Dialog text here'</span>;</span><br><span class="line">	e.returnValue = dialogText;</span><br><span class="line">	<span class="built_in">return</span> dialogText;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/25/window-onbeforeunload/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-苹果微信内打开网页跳转回之前的界面，让之前的页面刷新" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/25/%E8%8B%B9%E6%9E%9C%E5%BE%AE%E4%BF%A1%E5%86%85%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E8%B7%B3%E8%BD%AC%E5%9B%9E%E4%B9%8B%E5%89%8D%E7%9A%84%E7%95%8C%E9%9D%A2%EF%BC%8C%E8%AE%A9%E4%B9%8B%E5%89%8D%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0/">苹果微信内打开网页跳转回之前的界面，让之前的页面刷新</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/25/%E8%8B%B9%E6%9E%9C%E5%BE%AE%E4%BF%A1%E5%86%85%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E8%B7%B3%E8%BD%AC%E5%9B%9E%E4%B9%8B%E5%89%8D%E7%9A%84%E7%95%8C%E9%9D%A2%EF%BC%8C%E8%AE%A9%E4%B9%8B%E5%89%8D%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0/" class="archive-article-date">
-  	<time datetime="2019-10-25T08:11:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">两种写法：</span><br><span class="line">1.window.onpageshow = <span class="keyword">function</span>(event)&#123;</span><br><span class="line">        <span class="keyword">if</span> (event.persisted) &#123;</span><br><span class="line">            window.location.reload();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">	var isPageHide = <span class="literal">false</span>;</span><br><span class="line">	window.addEventListener(<span class="string">'pageshow'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		<span class="keyword">if</span> (isPageHide) &#123;</span><br><span class="line">			window.location.reload();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	window.addEventListener(<span class="string">'pagehide'</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		isPageHide = <span class="literal">true</span>;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/25/%E8%8B%B9%E6%9E%9C%E5%BE%AE%E4%BF%A1%E5%86%85%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E8%B7%B3%E8%BD%AC%E5%9B%9E%E4%B9%8B%E5%89%8D%E7%9A%84%E7%95%8C%E9%9D%A2%EF%BC%8C%E8%AE%A9%E4%B9%8B%E5%89%8D%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vue安装启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/25/vue%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8/">vue安装启动</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/25/vue%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8/" class="archive-article-date">
-  	<time datetime="2019-10-25T08:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.npm install vue 安装vue</span><br><span class="line">2.npm install -g @vue/cli 或者 yarn global add @vue/cli  脚手架</span><br><span class="line">3.yarn serve  启动</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/25/vue%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next</a>
@@ -1149,6 +1149,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
@@ -1157,15 +1161,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1174,6 +1174,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1186,6 +1190,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
