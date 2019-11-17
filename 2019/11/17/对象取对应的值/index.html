@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.j516.cn">
-  <title>mobiscroll 3.0的select使用 | fansy</title>
+  <title>对象取对应的值 | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171.引入mobiscroll.css  mobiscroll.js2.mbsc-control&amp;#123;position: absolute;left: 0;bottom: 0;opacity: 0;&amp;#125; &#x2F;&#x2F;css3.function updateCompany() &amp;#123;  &#x2F;&#x2F;js    $(&amp;apos;.companySel&amp;apos;).mo">
-<meta name="keywords" content="mobiscroll 3.0的select使用">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.keys(selVal);var value_arr = Object.">
+<meta name="keywords" content="对象取对应的值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mobiscroll 3.0的select使用">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;10&#x2F;25&#x2F;mobiscroll%203.0%E7%9A%84select%E4%BD%BF%E7%94%A8&#x2F;index.html">
+<meta property="og:title" content="对象取对应的值">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%AF%B9%E5%BA%94%E7%9A%84%E5%80%BC&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="12345678910111213141516171.引入mobiscroll.css  mobiscroll.js2.mbsc-control&amp;#123;position: absolute;left: 0;bottom: 0;opacity: 0;&amp;#125; &#x2F;&#x2F;css3.function updateCompany() &amp;#123;  &#x2F;&#x2F;js    $(&amp;apos;.companySel&amp;apos;).mo">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.keys(selVal);var value_arr = Object.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T08:09:41.602Z">
+<meta property="og:updated_time" content="2019-11-17T06:05:26.329Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -327,27 +327,28 @@ border-radius: 10px;
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mobiscroll 3.0的select使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-对象取对应的值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      mobiscroll 3.0的select使用
+      对象取对应的值
     </h1>
   
 
         
-        <a href="/2019/10/25/mobiscroll%203.0%E7%9A%84select%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2019-10-25T07:59:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
+        <a href="/2019/11/17/%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%AF%B9%E5%BA%94%E7%9A%84%E5%80%BC/" class="archive-article-date">
+  	<time datetime="2019-11-17T05:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.引入mobiscroll.css  mobiscroll.js</span><br><span class="line">2.mbsc-control&#123;position: absolute;left: 0;bottom: 0;opacity: 0;&#125; //css</span><br><span class="line">3.function <span class="function"><span class="title">updateCompany</span></span>() &#123;  //js</span><br><span class="line">    $(<span class="string">'.companySel'</span>).mobiscroll().select(&#123;</span><br><span class="line">        lang:<span class="string">"zh"</span>,</span><br><span class="line">        theme: <span class="string">'ios'</span>,</span><br><span class="line">        display: <span class="string">'bottom'</span>,</span><br><span class="line">        rows: 5,</span><br><span class="line">        showLabel: <span class="literal">false</span>,</span><br><span class="line">        height: 45,</span><br><span class="line">        group: <span class="literal">true</span>,</span><br><span class="line">        onSet: <span class="keyword">function</span> (val,el) &#123;</span><br><span class="line">            console.log(el._wheelArray[0]);</span><br><span class="line">            $(<span class="string">".companyVal"</span>).val(val.valueText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/* 公司对应的code */</span><br><span class="line">var selVal = &#123;</span><br><span class="line">    <span class="string">"1234"</span>: <span class="string">"A公司"</span>,</span><br><span class="line">    <span class="string">"5678"</span>: <span class="string">"B公司"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">方法一：（不支持IE浏览器）</span><br><span class="line">var key_arr = Object.keys(selVal);</span><br><span class="line">var value_arr = Object.values(selVal);</span><br><span class="line"><span class="keyword">function</span> companyTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> value_arr[key_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> key_arr[value_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line"><span class="keyword">function</span> companyTxt(selCode) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (prop == selCode) &#123;</span><br><span class="line">            <span class="built_in">return</span> selVal[prop];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(selTxt) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (selVal[prop] == selTxt) &#123;</span><br><span class="line">            <span class="built_in">return</span> prop;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -361,7 +362,7 @@ border-radius: 10px;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mobiscroll select</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -380,18 +381,9 @@ border-radius: 10px;
   
 <nav id="article-nav">
   
-    <a href="/2019/10/25/vue%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue安装启动
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/23/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%BA%A2%E5%87%BA%E6%98%BE%E7%A4%BA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">文字超出溢出显示...</div>
+    <a href="/2019/11/17/js%E6%B7%BB%E5%8A%A0swiper%E8%BD%AE%E6%92%AD%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js添加swiper轮播图</div>
       <i class="icon-circle-right"></i>
     </a>
   
