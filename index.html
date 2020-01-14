@@ -640,7 +640,7 @@ border-radius: 10px;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Lottie动画是将AE文件导出json文件，然后使用LottieJS进行动画的控制。</span><br><span class="line"></span><br><span class="line">html:</span><br><span class="line">&lt;div id=<span class="string">"lottie"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">js:	</span><br><span class="line">&lt;script src=<span class="string">"js/lottie.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">var params = &#123;</span><br><span class="line">	container: document.getElementById(<span class="string">'lottie'</span>),</span><br><span class="line">	renderer: <span class="string">'svg'</span>,</span><br><span class="line">	loop: <span class="literal">true</span>,</span><br><span class="line">	autoplay: <span class="literal">true</span>,</span><br><span class="line">	path: <span class="string">"data.json"</span></span><br><span class="line">&#125;;</span><br><span class="line">lottie.loadAnimation(params);</span><br><span class="line"></span><br><span class="line">链接：https://www.jianshu.com/p/c440eb16c685</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Lottie动画是将AE文件导出json文件，然后使用LottieJS进行动画的控制。</span><br><span class="line"></span><br><span class="line">html:</span><br><span class="line">&lt;div id=<span class="string">"lottie"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">js:	</span><br><span class="line">&lt;script src=<span class="string">"js/lottie.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">var params = &#123;</span><br><span class="line">	container: document.getElementById(<span class="string">'lottie'</span>),</span><br><span class="line">	renderer: <span class="string">'svg'</span>,</span><br><span class="line">	loop: <span class="literal">true</span>,</span><br><span class="line">	autoplay: <span class="literal">true</span>,</span><br><span class="line">	path: <span class="string">"data.json"</span>,</span><br><span class="line">	name: <span class="string">"params"</span></span><br><span class="line">&#125;;</span><br><span class="line">lottie.loadAnimation(params); //加载动画</span><br><span class="line"></span><br><span class="line">var anim = lottie.loadAnimation(params);</span><br><span class="line"></span><br><span class="line">动画实例的主要方法</span><br><span class="line">anim.play() — 播放动画。</span><br><span class="line">anim.stop() — 停止动画。</span><br><span class="line">anim.pause() — 暂停动画。</span><br><span class="line">anim.setSpeed(speed) — 设置播放速度，参数 speed 为 Number ，1为正常速度。</span><br><span class="line">anima.destroy() — 注销动画。</span><br><span class="line"></span><br><span class="line">lottie 的主要方法</span><br><span class="line">lottie.play(&lt;name&gt;) — 播放所有动画，name为动画名称，播放该动画。</span><br><span class="line">lottie.stop(&lt;name&gt;) — 停止所以动画，name为动画名称，停止该动画。</span><br><span class="line">lottie.setSpeed(speed, &lt;name&gt;) — 设置动画播放速度，speed指定速度，1为正常值，name为动画名称，只设定该动画的速度。</span><br><span class="line">lottie.destroy() — 注销动画释放资源，同时清空 dom 节点。</span><br><span class="line"></span><br><span class="line">链接：https://www.jianshu.com/p/c440eb16c685</span><br><span class="line"></span><br><span class="line">lottie使用：https://segmentfault.com/a/1190000018618944?utm_source=tag-newest</span><br></pre></td></tr></table></figure>
 
       
 
@@ -1153,11 +1153,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1177,6 +1181,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
@@ -1186,14 +1194,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1209,7 +1209,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1217,11 +1217,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
