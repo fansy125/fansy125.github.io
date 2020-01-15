@@ -326,6 +326,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-小程序接口请求封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/">小程序接口请求封装</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2019-10-25T08:48:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">1.方法封装（新建文件夹util工具文件，在文件夹下创建request.js文件，用于对方法封装）</span><br><span class="line"></span><br><span class="line">var app = getApp();</span><br><span class="line">//这里base URL</span><br><span class="line">var host = <span class="string">'http://192.168.3.32:8080/'</span>;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * POST请求，</span><br><span class="line"> * URL：接口</span><br><span class="line"> * postData：参数，json类型</span><br><span class="line"> * doSuccess：成功的回调函数</span><br><span class="line"> * doFail：失败的回调函数</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">function</span> request(url, postData, doSuccess, doFail) &#123;</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    //项目的真正接口，通过字符串拼接方式实现</span><br><span class="line">    url: host + url,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">"content-type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    data: postData,</span><br><span class="line">    method: <span class="string">'POST'</span>,</span><br><span class="line">    success: <span class="keyword">function</span>(res) &#123;</span><br><span class="line">      //参数值为res.data,直接将返回的数据传入</span><br><span class="line">      doSuccess(res.data);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      doFail();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//GET请求，不需传参，直接URL调用，</span><br><span class="line"><span class="keyword">function</span> getData(url, doSuccess, doFail) &#123;</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    url: host + url,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">"content-type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    method: <span class="string">'GET'</span>,</span><br><span class="line">    success: <span class="keyword">function</span>(res) &#123;</span><br><span class="line">      doSuccess(res.data);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      doFail();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * module.exports用来导出代码</span><br><span class="line"> * js文件中通过var call = require(<span class="string">"../util/request.js"</span>)  加载</span><br><span class="line"> * 在引入引入文件的时候<span class="string">"  "</span>里面的内容通过../../../这种类型，小程序的编译器会自动提示，因为你可能</span><br><span class="line"> * 项目目录不止一级，不同的js文件对应的工具类的位置不一样</span><br><span class="line"> */</span><br><span class="line">module.exports.request = request;</span><br><span class="line">module.exports.getData = getData;</span><br><span class="line"></span><br><span class="line">2.page创建一个文件夹，创建四种文件js里面加入</span><br><span class="line"></span><br><span class="line">//引入代码</span><br><span class="line">var call = require(<span class="string">"../../utils/request.js"</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    pictureList: [],</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    //调用封装的方法</span><br><span class="line">    call.getData(<span class="string">'superplanner/admin/load-companys'</span>, this.shuffleSuc, this.fail); //get请求</span><br><span class="line">    // call.request(<span class="string">'superplanner/admin/load-companys'</span>, &#123;&#125;, this.shuffleSuc, this.fail); //post请求</span><br><span class="line">  &#125;,</span><br><span class="line">  shuffleSuc: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      pictureList: data.data.list</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  fail: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">"失败"</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/mica/p/10893031.html</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-小程序路径跳转问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -985,80 +1059,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-Sublime Text3安装以及简单配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/Sublime%20Text3%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Sublime Text3安装以及简单配置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/23/Sublime%20Text3%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2019-10-23T08:40:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.插件中心：从菜单栏打开tool，从下拉菜单找到<span class="built_in">command</span> palete,打开之后会跳出一个文本框输入：package control也就是插件中心，点击install packet control</span><br><span class="line">2.语言：输入chinese，选择chineseLacalizations</span><br><span class="line">3.右边icon文件图标：A File Icon</span><br><span class="line">4.服务：输入sublimeServer找到sublime text的服务器插件</span><br><span class="line">5.代码提示：SublimeCodeIntel</span><br><span class="line">6.快捷键：Emmet</span><br><span class="line">7.格式化：HTML-CSS-JS Prettify 设置一下nodejs的安装路径</span><br><span class="line">8.px转rem 链接：https://www.jianshu.com/p/7ce9a705d869</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Sublime Text3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/23/Sublime%20Text3%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next</a>
@@ -1147,11 +1147,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,10 +1187,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
@@ -1199,11 +1195,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1211,11 +1207,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1224,6 +1220,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>

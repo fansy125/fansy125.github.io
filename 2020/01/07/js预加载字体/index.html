@@ -9,15 +9,15 @@
   <title>js预加载字体 | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="6ksVdTaA7Y" />
-  <meta name="description" content="1234567891011121314151617181920212223242526272829&#x2F;* 加载字体文件 *&#x2F;loadFont(&amp;#123;    cssValue: &amp;apos;hyds&amp;apos;,    url: &amp;apos;css&#x2F;hyds.ttf&amp;apos;,&amp;#125;);function loadFont(obj) &amp;#123;    if (document.fonts &amp;amp;&amp;amp; !this.ch">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 加载字体文件 *&#x2F;loadFont(&amp;#123;    cssValue: &amp;apos;hyds&amp;apos;,    url: &amp;apos;css&#x2F;hyds.ttf&amp;apos;,&amp;#125;);function loadFont(obj) &amp;#123;    if (document.fonts &amp;amp;&amp;amp; !thi">
 <meta name="keywords" content="js预加载字体">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js预加载字体">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2020&#x2F;01&#x2F;07&#x2F;js%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%AD%97%E4%BD%93&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829&#x2F;* 加载字体文件 *&#x2F;loadFont(&amp;#123;    cssValue: &amp;apos;hyds&amp;apos;,    url: &amp;apos;css&#x2F;hyds.ttf&amp;apos;,&amp;#125;);function loadFont(obj) &amp;#123;    if (document.fonts &amp;amp;&amp;amp; !this.ch">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 加载字体文件 *&#x2F;loadFont(&amp;#123;    cssValue: &amp;apos;hyds&amp;apos;,    url: &amp;apos;css&#x2F;hyds.ttf&amp;apos;,&amp;#125;);function loadFont(obj) &amp;#123;    if (document.fonts &amp;amp;&amp;amp; !thi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-07T03:19:50.698Z">
+<meta property="og:updated_time" content="2020-01-15T06:09:33.838Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -348,7 +348,7 @@ border-radius: 10px;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">/* 加载字体文件 */</span><br><span class="line">loadFont(&#123;</span><br><span class="line">    cssValue: <span class="string">'hyds'</span>,</span><br><span class="line">    url: <span class="string">'css/hyds.ttf'</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> loadFont(obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (document.fonts &amp;&amp; !this.checkFont(obj.cssValue)) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = new FontFace(obj.cssValue, `<span class="built_in">local</span>(<span class="string">'$&#123;obj.cssValue&#125;'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>) format(<span class="string">'ttf'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>)`);</span><br><span class="line">        fontFace.load().<span class="keyword">then</span>(<span class="keyword">function</span> (loadedFontFace) &#123;</span><br><span class="line">            document.fonts.add(loadedFontFace);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 检测字体文件是否已加载 */</span><br><span class="line"><span class="keyword">function</span> checkFont(name) &#123;</span><br><span class="line">    <span class="built_in">let</span> values = document.fonts.values();</span><br><span class="line">    <span class="built_in">let</span> isHave = <span class="literal">false</span>;</span><br><span class="line">    <span class="built_in">let</span> item = values.next();</span><br><span class="line">    <span class="keyword">while</span> (!item.done &amp;&amp; !isHave) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = item.value;</span><br><span class="line">        <span class="keyword">if</span> (fontFace.family == name) &#123;</span><br><span class="line">            isHave = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        item = values.next();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> isHave;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/* 加载字体文件 */</span><br><span class="line">loadFont(&#123;</span><br><span class="line">    cssValue: <span class="string">'hyds'</span>,</span><br><span class="line">    url: <span class="string">'css/hyds.ttf'</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> loadFont(obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (document.fonts &amp;&amp; !this.checkFont(obj.cssValue)) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = new FontFace(obj.cssValue, `<span class="built_in">local</span>(<span class="string">'$&#123;obj.cssValue&#125;'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>) format(<span class="string">'ttf'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>)`);</span><br><span class="line">        fontFace.load().<span class="keyword">then</span>(<span class="keyword">function</span> (loadedFontFace) &#123;</span><br><span class="line">            document.fonts.add(loadedFontFace);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 检测字体文件是否已加载 */</span><br><span class="line"><span class="keyword">function</span> checkFont(name) &#123;</span><br><span class="line">    <span class="built_in">let</span> values = document.fonts.values();</span><br><span class="line">    <span class="built_in">let</span> isHave = <span class="literal">false</span>;</span><br><span class="line">    <span class="built_in">let</span> item = values.next();</span><br><span class="line">    <span class="keyword">while</span> (!item.done &amp;&amp; !isHave) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = item.value;</span><br><span class="line">        <span class="keyword">if</span> (fontFace.family == name) &#123;</span><br><span class="line">            isHave = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        item = values.next();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> isHave;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/bjf784022747/articles/10337004.html</span><br></pre></td></tr></table></figure>
       
 
       
@@ -508,11 +508,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,10 +548,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
@@ -560,11 +556,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,11 +568,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,6 +581,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
