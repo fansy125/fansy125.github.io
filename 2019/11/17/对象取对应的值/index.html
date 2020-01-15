@@ -9,15 +9,15 @@
   <title>对象取对应的值 | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="6ksVdTaA7Y" />
-  <meta name="description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.keys(selVal);var value_arr = Object.">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.ke">
 <meta name="keywords" content="对象取对应的值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对象取对应的值">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%AF%B9%E5%BA%94%E7%9A%84%E5%80%BC&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.keys(selVal);var value_arr = Object.">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&#x2F;* 公司对应的code *&#x2F;var selVal = &amp;#123;    &quot;1234&quot;: &quot;A公司&quot;,    &quot;5678&quot;: &quot;B公司&quot;&amp;#125;;方法一：（不支持IE浏览器）var key_arr = Object.ke">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T06:05:26.329Z">
+<meta property="og:updated_time" content="2020-01-15T08:30:58.198Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -348,7 +348,7 @@ border-radius: 10px;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/* 公司对应的code */</span><br><span class="line">var selVal = &#123;</span><br><span class="line">    <span class="string">"1234"</span>: <span class="string">"A公司"</span>,</span><br><span class="line">    <span class="string">"5678"</span>: <span class="string">"B公司"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">方法一：（不支持IE浏览器）</span><br><span class="line">var key_arr = Object.keys(selVal);</span><br><span class="line">var value_arr = Object.values(selVal);</span><br><span class="line"><span class="keyword">function</span> companyTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> value_arr[key_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> key_arr[value_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line"><span class="keyword">function</span> companyTxt(selCode) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (prop == selCode) &#123;</span><br><span class="line">            <span class="built_in">return</span> selVal[prop];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(selTxt) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (selVal[prop] == selTxt) &#123;</span><br><span class="line">            <span class="built_in">return</span> prop;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">/* 公司对应的code */</span><br><span class="line">var selVal = &#123;</span><br><span class="line">    <span class="string">"1234"</span>: <span class="string">"A公司"</span>,</span><br><span class="line">    <span class="string">"5678"</span>: <span class="string">"B公司"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">方法一：（不支持IE浏览器）</span><br><span class="line">var key_arr = Object.keys(selVal);</span><br><span class="line">var value_arr = Object.values(selVal);</span><br><span class="line"><span class="keyword">function</span> companyTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> value_arr[key_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(txt) &#123;</span><br><span class="line">    <span class="built_in">return</span> key_arr[value_arr.indexOf(txt)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line"><span class="keyword">function</span> companyTxt(selCode) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (prop == selCode) &#123;</span><br><span class="line">            <span class="built_in">return</span> selVal[prop];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> codeTxt(selTxt) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> selVal) &#123;</span><br><span class="line">        <span class="keyword">if</span> (selVal[prop] == selTxt) &#123;</span><br><span class="line">            <span class="built_in">return</span> prop;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法三：</span><br><span class="line">sessionStorage.setItem(<span class="string">"list"</span>, JSON.stringify(res.companys.list));</span><br><span class="line"></span><br><span class="line"> /* 获取公司编号 */</span><br><span class="line">var companyCode = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">function</span> codeTxt(companyAll, companyVal) &#123;</span><br><span class="line">    $.each(companyAll, <span class="keyword">function</span> (i, v) &#123;</span><br><span class="line">        <span class="keyword">if</span> (companyVal == v.name) &#123;</span><br><span class="line">            companyCode = v.companyCode;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var list = JSON.parse(sessionStorage.getItem(<span class="string">"list"</span>));</span><br><span class="line">var companyVal = $(<span class="string">".companyVal"</span>).val();</span><br><span class="line">codeTxt(list, companyVal);</span><br></pre></td></tr></table></figure>
 
 
       
@@ -514,11 +514,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,7 +526,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -538,11 +538,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,10 +558,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">js swiper</a>
               </li>
              
@@ -566,11 +566,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -578,7 +578,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
