@@ -326,6 +326,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Swiper轮播—中间大两边小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD%E2%80%94%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/">Swiper轮播—中间大两边小</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD%E2%80%94%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/" class="archive-article-date">
+  	<time datetime="2020-03-02T08:19:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">var mySwiper = new Swiper(<span class="string">".mySwiper"</span>, &#123;</span><br><span class="line">    watchSlidesProgress: <span class="literal">true</span>,</span><br><span class="line">    slidesPerView: <span class="string">'auto'</span>,</span><br><span class="line">    centeredSlides: <span class="literal">true</span>,</span><br><span class="line">    loop: <span class="literal">true</span>,</span><br><span class="line">    loopedSlides: 5,</span><br><span class="line">    on: &#123;</span><br><span class="line">        progress: <span class="keyword">function</span> (progress) &#123;</span><br><span class="line">            <span class="keyword">for</span> (i = 0; i &lt; this.slides.length; i++) &#123;</span><br><span class="line">                var slide = this.slides.eq(i);</span><br><span class="line">                var slideProgress = this.slides[i].progress;</span><br><span class="line">                modify = 1;</span><br><span class="line">                <span class="keyword">if</span> (Math.abs(slideProgress) &gt; 1) &#123;</span><br><span class="line">                    modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;</span><br><span class="line">                &#125;</span><br><span class="line">                translate = slideProgress * modify * 2.3 + <span class="string">'rem'</span>;  /* 景深 */</span><br><span class="line">                scale = 1 - Math.abs(slideProgress) / 5;  /* 缩放 */</span><br><span class="line">                zIndex = 999 - Math.abs(Math.round(10 * slideProgress));</span><br><span class="line">                slide.transform(<span class="string">'translateX('</span> + translate + <span class="string">') scale('</span> + scale + <span class="string">')'</span>);</span><br><span class="line">                slide.css(<span class="string">'zIndex'</span>, zIndex);</span><br><span class="line">                slide.css(<span class="string">'opacity'</span>, 1);</span><br><span class="line">                <span class="keyword">if</span> (Math.abs(slideProgress) &gt; 3) &#123;</span><br><span class="line">                    slide.css(<span class="string">'opacity'</span>, 0);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        setTransition: <span class="keyword">function</span> (transition) &#123;</span><br><span class="line">            <span class="keyword">for</span> (var i = 0; i &lt; this.slides.length; i++) &#123;</span><br><span class="line">                var slide = this.slides.eq(i)</span><br><span class="line">                slide.transition(transition);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swiper</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD%E2%80%94%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-tab切换点击自身不需要再次请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -989,80 +1063,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-LottieJS动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/31/LottieJS%E5%8A%A8%E7%94%BB/">LottieJS动画</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/31/LottieJS%E5%8A%A8%E7%94%BB/" class="archive-article-date">
-  	<time datetime="2019-12-31T06:19:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Lottie动画是将AE文件导出json文件，然后使用LottieJS进行动画的控制。</span><br><span class="line"></span><br><span class="line">html:</span><br><span class="line">&lt;div id=<span class="string">"lottie"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">js:	</span><br><span class="line">&lt;script src=<span class="string">"js/lottie.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">var params = &#123;</span><br><span class="line">	container: document.getElementById(<span class="string">'lottie'</span>),</span><br><span class="line">	renderer: <span class="string">'svg'</span>,</span><br><span class="line">	loop: <span class="literal">true</span>,</span><br><span class="line">	autoplay: <span class="literal">true</span>,</span><br><span class="line">	path: <span class="string">"data.json"</span>,</span><br><span class="line">	name: <span class="string">"params"</span></span><br><span class="line">&#125;;</span><br><span class="line">lottie.loadAnimation(params); //加载动画</span><br><span class="line"></span><br><span class="line">var anim = lottie.loadAnimation(params);</span><br><span class="line"></span><br><span class="line">动画实例的主要方法</span><br><span class="line">anim.play() — 播放动画。</span><br><span class="line">anim.stop() — 停止动画。</span><br><span class="line">anim.pause() — 暂停动画。</span><br><span class="line">anim.setSpeed(speed) — 设置播放速度，参数 speed 为 Number ，1为正常速度。</span><br><span class="line">anima.destroy() — 注销动画。</span><br><span class="line"></span><br><span class="line">lottie 的主要方法</span><br><span class="line">lottie.play(&lt;name&gt;) — 播放所有动画，name为动画名称，播放该动画。</span><br><span class="line">lottie.stop(&lt;name&gt;) — 停止所以动画，name为动画名称，停止该动画。</span><br><span class="line">lottie.setSpeed(speed, &lt;name&gt;) — 设置动画播放速度，speed指定速度，1为正常值，name为动画名称，只设定该动画的速度。</span><br><span class="line">lottie.destroy() — 注销动画释放资源，同时清空 dom 节点。</span><br><span class="line"></span><br><span class="line">链接：https://www.jianshu.com/p/c440eb16c685</span><br><span class="line"></span><br><span class="line">lottie使用：https://segmentfault.com/a/1190000018618944?utm_source=tag-newest</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">lottie</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/31/LottieJS%E5%8A%A8%E7%94%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next</a>
@@ -1151,7 +1151,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1159,7 +1159,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1167,15 +1171,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1183,15 +1179,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1215,11 +1215,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
