@@ -326,6 +326,79 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-点击input输入框页面弹起问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">点击input输入框页面弹起问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2019-12-04T08:18:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var u = navigator.userAgent;</span><br><span class="line">var isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Adr'</span>) &gt; -1;</span><br><span class="line">var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);</span><br><span class="line"><span class="keyword">if</span> (isiOS == <span class="literal">true</span>) &#123;</span><br><span class="line">	$(<span class="string">"input,select"</span>).blur(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">			var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;</span><br><span class="line">			window.scrollTo(0, Math.max(scrollHeight - 1, 0));</span><br><span class="line">		&#125;, 100);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (isAndroid == <span class="literal">true</span>) &#123;</span><br><span class="line">	var jh = $(window).height();</span><br><span class="line">	$(window).resize(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		var thisHeight = $(this).height();</span><br><span class="line">		<span class="keyword">if</span> (jh - thisHeight &gt; 50) &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, jh + <span class="string">'px'</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, <span class="string">'100%'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-禁止页面横屏显示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -790,7 +863,7 @@ border-radius: 10px;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/video-js.min.css"</span> /&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/video.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"sleepVideo_box"</span>&gt;</span><br><span class="line">    &lt;video id=<span class="string">"sleepVideo-player"</span> class=<span class="string">"video-js sleepVideo_video"</span> preload=<span class="string">"auto"</span> poster=<span class="string">"预览图片"</span> playsinline=<span class="string">"true"</span> data-setup=<span class="string">'&#123;&#125;'</span>&gt;</span><br><span class="line">        &lt;<span class="built_in">source</span> src=<span class="string">"视频路径"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</span><br><span class="line">    &lt;/video&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.vjs-poster&#123;background-size: 100% 100%;&#125;   //poster全屏展示</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">var sleepVideo_player = videojs(<span class="string">'sleepVideo-player'</span>, &#123;   //配置</span><br><span class="line">    controls: <span class="literal">false</span>,</span><br><span class="line">    children: &#123;</span><br><span class="line">        controlBar: &#123;</span><br><span class="line">            fullscreenToggle: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="keyword">function</span> <span class="function"><span class="title">onPlayerReady</span></span>() &#123;</span><br><span class="line">    this.on(<span class="string">"ended"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">sleepVideo_player.play();   //播放</span><br><span class="line">sleepVideo_player.pause();   //暂停</span><br><span class="line">sleepVideo_player.src(&#123; src: <span class="string">""</span>, <span class="built_in">type</span>: <span class="string">"video/mp4"</span> &#125;);   //切换视频</span><br><span class="line"></span><br><span class="line">链接：https://blog.csdn.net/a0405221/article/details/80923090</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/video-js.min.css"</span> /&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/video.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"sleepVideo_box"</span>&gt;</span><br><span class="line">    &lt;video id=<span class="string">"sleepVideo-player"</span> class=<span class="string">"video-js sleepVideo_video"</span> preload=<span class="string">"auto"</span> poster=<span class="string">"预览图片"</span> playsinline=<span class="string">"true"</span> data-setup=<span class="string">'&#123;&#125;'</span>&gt;</span><br><span class="line">        &lt;<span class="built_in">source</span> src=<span class="string">"视频路径"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</span><br><span class="line">    &lt;/video&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">poster预览图单个视频可以，多个视频ios会有图片闪烁问题。</span><br><span class="line">可以背景添加预览图</span><br><span class="line">.vjs-poster&#123;background-size: 100% 100%;&#125;</span><br><span class="line">.container .video-js&#123;background: url(<span class="string">"../images/videoBg.png"</span>) no-repeat;background-size: 100% 100%;&#125;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.vjs-poster&#123;background-size: 100% 100%;&#125;   //poster全屏展示</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">var sleepVideo_player = videojs(<span class="string">'sleepVideo-player'</span>, &#123;   //配置</span><br><span class="line">    controls: <span class="literal">false</span>,</span><br><span class="line">    children: &#123;</span><br><span class="line">        controlBar: &#123;</span><br><span class="line">            fullscreenToggle: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="keyword">function</span> <span class="function"><span class="title">onPlayerReady</span></span>() &#123;</span><br><span class="line">    this.on(<span class="string">"ended"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">sleepVideo_player.play();   //播放</span><br><span class="line">sleepVideo_player.pause();   //暂停</span><br><span class="line">sleepVideo_player.src(&#123; src: <span class="string">""</span>, <span class="built_in">type</span>: <span class="string">"video/mp4"</span> &#125;);   //切换视频</span><br><span class="line"></span><br><span class="line">链接：https://blog.csdn.net/a0405221/article/details/80923090</span><br></pre></td></tr></table></figure>
 
       
 
@@ -990,79 +1063,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-H5视频全屏播放" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">H5视频全屏播放</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/" class="archive-article-date">
-  	<time datetime="2019-11-11T07:40:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;div class=<span class="string">"homeVideo_box"</span>&gt;</span><br><span class="line">    &lt;video class=<span class="string">"homeVideo_video"</span> id=<span class="string">"homeVideo_video"</span> webkit-playsinline=<span class="string">"true"</span> x5-video-player-type=<span class="string">"h5"</span></span><br><span class="line">        x5-video-player-fullscreen=<span class="string">"true"</span> playsinline=<span class="string">"true"</span> preload=<span class="string">"auto"</span> src=<span class="string">"视频路径"</span></span><br><span class="line">        poster=<span class="string">"images/sleepVideo_img1.png"</span>&gt;&lt;/video&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_play abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/sleepVideo_play.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_jump abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/homeVideo_jump.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">/* 开始视频homeVideo */</span><br><span class="line">.homeVideo_box&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 9;overflow: hidden;background: <span class="comment">#000;&#125;</span></span><br><span class="line">.homeVideo_video&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;&#125;</span><br><span class="line">.homeVideo_play&#123;width: 20%;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);&#125;</span><br><span class="line">.homeVideo_jump&#123;width: 18%;right: 5%;top: 4%;&#125;</span><br><span class="line">video&#123;object-fit: fill;object-position: center center;&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">/* 开始视频 */</span><br><span class="line">$(<span class="string">".homeVideo_play"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_play"</span>).hide();</span><br><span class="line">    $(<span class="string">".homeVideo_video"</span>)[0].play();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 开始视频播放完 */</span><br><span class="line">var homeVideo_video = document.getElementById(<span class="string">"homeVideo_video"</span>);</span><br><span class="line">homeVideo_video.onended = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/* 点击跳过视频 */</span><br><span class="line">$(<span class="string">".homeVideo_jump"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">video</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next</a>
@@ -1151,10 +1151,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
@@ -1163,7 +1159,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1171,15 +1167,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,7 +1175,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">html input</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1195,11 +1191,23 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">js swiper</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">js split</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1208,10 +1216,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
