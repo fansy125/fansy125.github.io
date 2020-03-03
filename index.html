@@ -326,6 +326,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-input标签capture属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/03/input%E6%A0%87%E7%AD%BEcapture%E5%B1%9E%E6%80%A7/">input标签capture属性</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/03/input%E6%A0%87%E7%AD%BEcapture%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2020-03-03T02:39:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">HTML5官方文档解释：capture属性用于调用设备的摄像头或麦克风。</span><br><span class="line">当accept=”audio/*或video/*”时capture只有两种值，一种是user，用于调用面向人脸的摄像头(例如手机前置摄像头)，一种是environment，用于调用环境摄像头(例如手机后置摄像头)。</span><br><span class="line">当accept=”audio”时，只要有capture就调用设备麦克风，忽略user和environment值。</span><br><span class="line">至于网上提到的camera和filesystem，官方没提。</span><br><span class="line">iOS最遵守遵守HTML5规范，其次是X5内核，安卓的webview基本忽略了capture。</span><br><span class="line">理想情况下应该按照如下开发webview：</span><br><span class="line">1. 当accept=”image/*”时，capture=”user”调用前置照相机，capture=”其他值”，调用后置照相机</span><br><span class="line">2. 当accept=”video/*”时，capture=”user”调用前置录像机，capture=”其他值”，调用后置录像机</span><br><span class="line">3. 当accept=”image/*,video/*”，capture=”user”调用前置摄像头，capture=”其他值”，调用后置摄像头，默认照相，可切换录像</span><br><span class="line">4. 当accept=”audio/*”时，capture=”放空或者任意值”，调用录音机</span><br><span class="line">5. 当input没有capture时，根据accppt类型给出文件夹选项以及摄像头或者录音机选项</span><br><span class="line">6. input含有multiple时访问文件夹可勾选多文件，调用系统摄像头或者录音机都只是单文件</span><br><span class="line">7. 无multiple时都只能单文件</span><br><span class="line"></span><br><span class="line">链接：http://h5apk.cn/input-capture.php</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html input</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/03/input%E6%A0%87%E7%AD%BEcapture%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Swiper轮播—中间大两边小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -876,7 +950,7 @@ border-radius: 10px;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html input</a>
         		</li>
       		
 		</ul>
@@ -989,83 +1063,9 @@ border-radius: 10px;
 
 
   
-    <article id="post-clipboard拷贝文字简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/02/clipboard%E6%8B%B7%E8%B4%9D%E6%96%87%E5%AD%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">clipboard拷贝文字简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/02/clipboard%E6%8B%B7%E8%B4%9D%E6%96%87%E5%AD%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-01-02T03:35:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> id=<span class="string">"txt"</span>&gt;</span><br><span class="line">    &lt;!-- 从另一个元素复制内容，可以给目标元素添加一个 data-clipboard-target 属性来实现这个功能。 --&gt;</span><br><span class="line">    &lt;!-- 定义一个 data-clipboard-action 属性来指明你想要复制还是剪切内容如果你省略这个属性，则默认为复制。--&gt;</span><br><span class="line">    &lt;!-- copy/cut --&gt;</span><br><span class="line">    &lt;div data-clipboard-action=<span class="string">"copy"</span> data-clipboard-target=<span class="string">"#txt"</span> class=<span class="string">"copyIco"</span>&gt;复制按钮&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">&lt;script src=<span class="string">"js/clipboard.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">/* 点击复制 */</span><br><span class="line">var clipboard = new ClipboardJS(<span class="string">'.copyIco'</span>);</span><br><span class="line">clipboard.on(<span class="string">'success'</span>, <span class="keyword">function</span> (e) &#123;</span><br><span class="line">    console.log(<span class="string">"复制成功，请到粘贴板粘贴"</span>)</span><br><span class="line">&#125;);</span><br><span class="line">clipboard.on(<span class="string">'error'</span>, <span class="keyword">function</span> (e) &#123;</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">链接：http://www.clipboardjs.cn/</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">clipboard</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/02/clipboard%E6%8B%B7%E8%B4%9D%E6%96%87%E5%AD%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next</a>
     </nav>
   
 
@@ -1159,7 +1159,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1167,11 +1167,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1179,7 +1179,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,15 +1187,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color1">html input</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1207,11 +1207,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
