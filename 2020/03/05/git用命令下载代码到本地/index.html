@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.j516.cn">
-  <title>js时间格式转换 | fansy</title>
+  <title>git用命令下载代码到本地 | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="6ksVdTaA7Y" />
-  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536371.时间戳转yyyy-mm-dd-hh-mm-ss格式方法一：function dateInit(fmt, date) &amp;#123;   var o = &amp;#123;      &quot;M+&quot;: date.getMonth() + 1,           &#x2F;&#x2F;月份">
-<meta name="keywords" content="js时间格式转换">
+  <meta name="description" content="121.git init 初始化 2.git clone 链接">
+<meta name="keywords" content="git用命令下载代码到本地">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js时间格式转换">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;11&#x2F;25&#x2F;js%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2&#x2F;index.html">
+<meta property="og:title" content="git用命令下载代码到本地">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2020&#x2F;03&#x2F;05&#x2F;git%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%BB%A3%E7%A0%81%E5%88%B0%E6%9C%AC%E5%9C%B0&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536371.时间戳转yyyy-mm-dd-hh-mm-ss格式方法一：function dateInit(fmt, date) &amp;#123;   var o = &amp;#123;      &quot;M+&quot;: date.getMonth() + 1,           &#x2F;&#x2F;月份">
+<meta property="og:description" content="121.git init 初始化 2.git clone 链接">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-25T09:26:46.793Z">
+<meta property="og:updated_time" content="2020-03-05T10:15:39.027Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -328,27 +328,27 @@ border-radius: 10px;
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js时间格式转换" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git用命令下载代码到本地" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js时间格式转换
+      git用命令下载代码到本地
     </h1>
   
 
         
-        <a href="/2019/11/25/js%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" class="archive-article-date">
-  	<time datetime="2019-11-25T09:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
+        <a href="/2020/03/05/git%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%BB%A3%E7%A0%81%E5%88%B0%E6%9C%AC%E5%9C%B0/" class="archive-article-date">
+  	<time datetime="2020-03-05T10:14:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">1.时间戳转yyyy-mm-dd-hh-mm-ss格式</span><br><span class="line">方法一：</span><br><span class="line"><span class="keyword">function</span> dateInit(fmt, date) &#123;</span><br><span class="line">   var o = &#123;</span><br><span class="line">      <span class="string">"M+"</span>: date.getMonth() + 1,           //月份   </span><br><span class="line">      <span class="string">"d+"</span>: date.getDate(),                //日   </span><br><span class="line">      <span class="string">"h+"</span>: date.getHours(),               //小时   </span><br><span class="line">      <span class="string">"m+"</span>: date.getMinutes(),             //分   </span><br><span class="line">      <span class="string">"s+"</span>: date.getSeconds(),             //秒   </span><br><span class="line">      <span class="string">"q+"</span>: Math.floor((date.getMonth() + 3) / 3),  //季度   </span><br><span class="line">      <span class="string">"S"</span>: date.getMilliseconds()          //毫秒   </span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">if</span> (/(y+)/.<span class="built_in">test</span>(fmt)) &#123;</span><br><span class="line">      fmt = fmt.replace(RegExp.<span class="variable">$1</span>, (date.getFullYear() + <span class="string">""</span>).substr(4 - RegExp.<span class="variable">$1</span>.length));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">for</span> (var k <span class="keyword">in</span> o) &#123;</span><br><span class="line">      <span class="keyword">if</span> (new RegExp(<span class="string">"("</span> + k + <span class="string">")"</span>).<span class="built_in">test</span>(fmt)) &#123;</span><br><span class="line">         fmt = fmt.replace(RegExp.<span class="variable">$1</span>, (RegExp.<span class="variable">$1</span>.length == 1) ? (o[k]) : ((<span class="string">"00"</span> + o[k]).substr((<span class="string">""</span> + o[k]).length)));</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">return</span> fmt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dateInit(<span class="string">"yyyy-MM-dd hh:mm:ss"</span>,new Date(时间戳));</span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line"><span class="keyword">function</span> time(time = +new Date()) &#123;</span><br><span class="line">    var date = new Date(time + 8 * 3600 * 1000);</span><br><span class="line">    <span class="built_in">return</span> date.toJSON().substr(0, 19).replace(<span class="string">'T'</span>, <span class="string">' '</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.yyyy-mm-dd-hh-mm-ss转年月日格式</span><br><span class="line"><span class="keyword">function</span> formatDate(str) &#123;</span><br><span class="line">	var reg = /(\d&#123;4&#125;)\-(\d&#123;2&#125;)\-(\d&#123;2&#125;)/;</span><br><span class="line">	var date = str.replace(reg, <span class="string">"<span class="variable">$1</span>年<span class="variable">$2</span>月<span class="variable">$3</span>日"</span>).substr(0, 11);</span><br><span class="line">	<span class="built_in">return</span> date;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.git init 初始化 </span><br><span class="line">2.git <span class="built_in">clone</span> 链接</span><br></pre></td></tr></table></figure>
 
       
 
@@ -362,7 +362,7 @@ border-radius: 10px;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -381,18 +381,9 @@ border-radius: 10px;
   
 <nav id="article-nav">
   
-    <a href="/2019/12/04/input%E8%BE%93%E5%85%A5%E6%A1%86%E5%AF%86%E7%A0%81%E6%98%9F%E5%8F%B7%E6%98%BE%E7%A4%BA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          input输入框密码*显示
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/17/%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%AF%B9%E5%BA%94%E7%9A%84%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">对象取对应的值</div>
+    <a href="/2020/03/05/vue%E5%85%A8%E5%B1%80main-js%E5%BC%95%E5%85%A5%E5%BE%AE%E4%BF%A1weixin-js-sdk/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue全局main.js引入微信weixin-js-sdk</div>
       <i class="icon-circle-right"></i>
     </a>
   
