@@ -6,18 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.j516.cn">
-  <title>split分隔符总结/获取上传文件名称 | fansy</title>
+  <title>Tag: audio | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="6ksVdTaA7Y" />
-  <meta name="description" content="123456781.字符&quot;|&quot;, &quot;*&quot;, &quot;+&quot;都得加上转义字符，前面加上&quot;\\&quot;。2.而如果是&quot;\&quot;，那么就得写成&quot;\\\\&quot;。3.如果一个字符串中有多个分隔符，可以用&quot;|&quot;作为连字符。上传文件值分割为数组C:\fakepath\img1.jpg$(&quot;.uploadFile&quot;).val().split(&quot;\\&quot;);[&quot;C:&quot;, &quot;fakepath&quot;, &quot;img1.jpg&quot;]">
-<meta name="keywords" content="split分隔符总结&#x2F;获取上传文件名称">
-<meta property="og:type" content="article">
-<meta property="og:title" content="split分隔符总结&#x2F;获取上传文件名称">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2020&#x2F;03&#x2F;03&#x2F;split%E5%88%86%E9%9A%94%E7%AC%A6%E6%80%BB%E7%BB%93-%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="fansy">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;tags&#x2F;audio&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="123456781.字符&quot;|&quot;, &quot;*&quot;, &quot;+&quot;都得加上转义字符，前面加上&quot;\\&quot;。2.而如果是&quot;\&quot;，那么就得写成&quot;\\\\&quot;。3.如果一个字符串中有多个分隔符，可以用&quot;|&quot;作为连字符。上传文件值分割为数组C:\fakepath\img1.jpg$(&quot;.uploadFile&quot;).val().split(&quot;\\&quot;);[&quot;C:&quot;, &quot;fakepath&quot;, &quot;img1.jpg&quot;]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-03T05:29:26.899Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -328,104 +324,60 @@ border-radius: 10px;
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-split分隔符总结-获取上传文件名称" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      split分隔符总结/获取上传文件名称
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/19/%E7%9B%91%E5%90%ACaudio%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90/" class="archive-article-date">
+  	<time datetime="2020-03-19T03:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/03/19/%E7%9B%91%E5%90%ACaudio%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90/">监听audio加载完成</a>
     </h1>
   
 
-        
-        <a href="/2020/03/03/split%E5%88%86%E9%9A%94%E7%AC%A6%E6%80%BB%E7%BB%93-%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0/" class="archive-article-date">
-  	<time datetime="2020-03-03T05:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.字符<span class="string">"|"</span>, <span class="string">"*"</span>, <span class="string">"+"</span>都得加上转义字符，前面加上<span class="string">"\\"</span>。</span><br><span class="line">2.而如果是<span class="string">"\"，那么就得写成"</span>\\\\"。</span><br><span class="line">3.如果一个字符串中有多个分隔符，可以用<span class="string">"|"</span>作为连字符。</span><br><span class="line"></span><br><span class="line">上传文件值分割为数组</span><br><span class="line">C:\fakepath\img1.jpg</span><br><span class="line">$(<span class="string">".uploadFile"</span>).val().split(<span class="string">"\\"</span>);</span><br><span class="line">[<span class="string">"C:"</span>, <span class="string">"fakepath"</span>, <span class="string">"img1.jpg"</span>]</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">js split</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">audio</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/03/05/vue%E6%89%93%E5%8C%85%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90svg/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue打包无法解析svg
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/03/03/input%E6%A0%87%E7%AD%BEcapture%E5%B1%9E%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">input标签capture属性</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -448,9 +400,9 @@ border-radius: 10px;
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
