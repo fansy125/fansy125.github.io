@@ -326,6 +326,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-split分隔符总结-获取上传文件名称" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/03/split%E5%88%86%E9%9A%94%E7%AC%A6%E6%80%BB%E7%BB%93-%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0/">split分隔符总结/获取上传文件名称</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/03/split%E5%88%86%E9%9A%94%E7%AC%A6%E6%80%BB%E7%BB%93-%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0/" class="archive-article-date">
+  	<time datetime="2020-03-03T05:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.字符<span class="string">"|"</span>, <span class="string">"*"</span>, <span class="string">"+"</span>都得加上转义字符，前面加上<span class="string">"\\"</span>。</span><br><span class="line">2.而如果是<span class="string">"\"，那么就得写成"</span>\\\\"。</span><br><span class="line">3.如果一个字符串中有多个分隔符，可以用<span class="string">"|"</span>作为连字符。</span><br><span class="line"></span><br><span class="line">上传文件值分割为数组</span><br><span class="line">C:\fakepath\img1.jpg</span><br><span class="line">$(<span class="string">".uploadFile"</span>).val().split(<span class="string">"\\"</span>);</span><br><span class="line">[<span class="string">"C:"</span>, <span class="string">"fakepath"</span>, <span class="string">"img1.jpg"</span>]</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">js split</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/03/split%E5%88%86%E9%9A%94%E7%AC%A6%E6%80%BB%E7%BB%93-%E8%8E%B7%E5%8F%96%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-input标签capture属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -990,79 +1064,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-js日期时间排序正-反序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/">js日期时间排序正/反序</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-01-02T06:17:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="built_in">type</span>: <span class="string">"GET"</span>,</span><br><span class="line">    url: <span class="string">"data.json"</span>,</span><br><span class="line">    dataType: <span class="string">"json"</span>,</span><br><span class="line">    success: <span class="keyword">function</span> (res) &#123;</span><br><span class="line">        //方法调用</span><br><span class="line">        console.log(ForwardRankingDate(res.dataContent, <span class="string">"received"</span>));  //2017-01-18 13:23:21</span><br><span class="line">        console.log(ForwardDate(res.dataContent));</span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="keyword">function</span> (res) &#123;</span><br><span class="line">        alert(<span class="string">"请求失败"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 方法一： */</span><br><span class="line"></span><br><span class="line">//正序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ForwardRankingDate(data, p) &#123;</span><br><span class="line">    <span class="keyword">for</span> (i = 0; i &lt; data.length - 1; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = 0; j &lt; data.length - 1 - i; j++) &#123;</span><br><span class="line">            console.log(Date.parse(data[j][p]));</span><br><span class="line">            <span class="keyword">if</span> (Date.parse(data[j][p]) &gt; Date.parse(data[j + 1][p])) &#123;</span><br><span class="line">                var temp = data[j];</span><br><span class="line">                data[j] = data[j + 1];</span><br><span class="line">                data[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//反序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ReverseRankingDate(data, p) &#123;</span><br><span class="line">    <span class="keyword">for</span> (i = 0; i &lt; data.length - 1; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = 0; j &lt; data.length - 1 - i; j++) &#123;</span><br><span class="line">            console.log(Date.parse(data[j][p]));</span><br><span class="line">            <span class="keyword">if</span> (Date.parse(data[j][p]) &lt; Date.parse(data[j + 1][p])) &#123;</span><br><span class="line">                var temp = data[j];</span><br><span class="line">                data[j] = data[j + 1];</span><br><span class="line">                data[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 方法二： */</span><br><span class="line"></span><br><span class="line">//正序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ForwardDate(data) &#123;</span><br><span class="line">    data.sort((a, b) =&gt; &#123;</span><br><span class="line">        <span class="built_in">return</span> a.received &gt; b.received ? 1 : -1;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//反序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ReverseDate(data) &#123;</span><br><span class="line">    data.sort((a, b) =&gt; &#123;</span><br><span class="line">        <span class="built_in">return</span> a.received &lt; b.received ? 1 : -1;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next</a>
@@ -1151,19 +1152,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1175,7 +1168,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,11 +1180,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1207,15 +1208,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">js split</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1244,6 +1245,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">audio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
               </li>
             
             <div class="clearfix"></div>
