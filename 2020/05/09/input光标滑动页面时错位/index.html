@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.j516.cn">
-  <title>小程序接口请求封装 | fansy</title>
+  <title>input光标滑动页面时错位 | fansy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="baidu-site-verification" content="6ksVdTaA7Y" />
-  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283841.方法封装（新建文件夹util工具文件，在文件夹下创建request.js文件，">
-<meta name="keywords" content="小程序接口请求封装">
+  <meta name="description" content="12345on:&amp;#123;    sliderMove: function()&amp;#123;        $(&amp;apos;input,textarea&amp;apos;).blur();    &amp;#125;,&amp;#125;,">
+<meta name="keywords" content="input光标滑动页面时错位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小程序接口请求封装">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2019&#x2F;10&#x2F;25&#x2F;%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85&#x2F;index.html">
+<meta property="og:title" content="input光标滑动页面时错位">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.j516.cn&#x2F;2020&#x2F;05&#x2F;09&#x2F;input%E5%85%89%E6%A0%87%E6%BB%91%E5%8A%A8%E9%A1%B5%E9%9D%A2%E6%97%B6%E9%94%99%E4%BD%8D&#x2F;index.html">
 <meta property="og:site_name" content="fansy">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283841.方法封装（新建文件夹util工具文件，在文件夹下创建request.js文件，">
+<meta property="og:description" content="12345on:&amp;#123;    sliderMove: function()&amp;#123;        $(&amp;apos;input,textarea&amp;apos;).blur();    &amp;#125;,&amp;#125;,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T09:32:32.533Z">
+<meta property="og:updated_time" content="2020-05-09T09:38:22.366Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="icon" href="/img/head.jpg">
@@ -328,28 +328,27 @@ border-radius: 10px;
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-小程序接口请求封装" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-input光标滑动页面时错位" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小程序接口请求封装
+      input光标滑动页面时错位
     </h1>
   
 
         
-        <a href="/2019/10/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2019-10-25T08:48:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
+        <a href="/2020/05/09/input%E5%85%89%E6%A0%87%E6%BB%91%E5%8A%A8%E9%A1%B5%E9%9D%A2%E6%97%B6%E9%94%99%E4%BD%8D/" class="archive-article-date">
+  	<time datetime="2020-05-09T09:02:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">1.方法封装（新建文件夹util工具文件，在文件夹下创建request.js文件，用于对方法封装）</span><br><span class="line"></span><br><span class="line">var app = getApp();</span><br><span class="line">//这里base URL</span><br><span class="line">var host = <span class="string">'http://192.168.3.32:8080/'</span>;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * POST请求，</span><br><span class="line"> * URL：接口</span><br><span class="line"> * postData：参数，json类型</span><br><span class="line"> * doSuccess：成功的回调函数</span><br><span class="line"> * doFail：失败的回调函数</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">function</span> request(url, postData, doSuccess, doFail) &#123;</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    //项目的真正接口，通过字符串拼接方式实现</span><br><span class="line">    url: host + url,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">"content-type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    data: postData,</span><br><span class="line">    method: <span class="string">'POST'</span>,</span><br><span class="line">    success: <span class="keyword">function</span>(res) &#123;</span><br><span class="line">      //参数值为res.data,直接将返回的数据传入</span><br><span class="line">      doSuccess(res.data);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      doFail();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//GET请求，不需传参，直接URL调用，</span><br><span class="line"><span class="keyword">function</span> getData(url, doSuccess, doFail) &#123;</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    url: host + url,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">"content-type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    method: <span class="string">'GET'</span>,</span><br><span class="line">    success: <span class="keyword">function</span>(res) &#123;</span><br><span class="line">      doSuccess(res.data);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      doFail();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * module.exports用来导出代码</span><br><span class="line"> * js文件中通过var call = require(<span class="string">"../util/request.js"</span>)  加载</span><br><span class="line"> * 在引入引入文件的时候<span class="string">"  "</span>里面的内容通过../../../这种类型，小程序的编译器会自动提示，因为你可能</span><br><span class="line"> * 项目目录不止一级，不同的js文件对应的工具类的位置不一样</span><br><span class="line"> */</span><br><span class="line">module.exports.request = request;</span><br><span class="line">module.exports.getData = getData;</span><br><span class="line"></span><br><span class="line">2.page创建一个文件夹，创建四种文件js里面加入</span><br><span class="line"></span><br><span class="line">//引入代码</span><br><span class="line">var call = require(<span class="string">"../../utils/request.js"</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    pictureList: [],</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    //调用封装的方法</span><br><span class="line">    call.getData(<span class="string">'superplanner/admin/load-companys'</span>, this.shuffleSuc, this.fail); //get请求</span><br><span class="line">    // call.request(<span class="string">'superplanner/admin/load-companys'</span>, &#123;&#125;, this.shuffleSuc, this.fail); //post请求</span><br><span class="line">  &#125;,</span><br><span class="line">  shuffleSuc: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      pictureList: data.data.list</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  fail: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">"失败"</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/mica/p/10893031.html</span><br></pre></td></tr></table></figure>
-
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">on:&#123;</span><br><span class="line">    sliderMove: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">        $(<span class="string">'input,textarea'</span>).blur();</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
       
 
       
@@ -362,7 +361,7 @@ border-radius: 10px;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swiper</a>
         		</li>
       		
 		</ul>
@@ -381,18 +380,18 @@ border-radius: 10px;
   
 <nav id="article-nav">
   
-    <a href="/2019/10/29/ajax%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/09/Swiper%E5%8E%BB%E6%8E%89%E5%BC%B9%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          ajax方法封装
+          Swiper去掉弹性
         
       </div>
     </a>
   
   
-    <a href="/2019/10/25/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序路径跳转问题</div>
+    <a href="/2020/05/09/%E7%A7%BB%E5%8A%A8%E7%AB%AFVConsole%E8%B0%83%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">移动端VConsole调试</div>
       <i class="icon-circle-right"></i>
     </a>
   
