@@ -326,6 +326,79 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-mescroll下拉刷新上拉加载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/">mescroll下拉刷新上拉加载</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/" class="archive-article-date">
+  	<time datetime="2020-05-09T08:30:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">1.引入mescroll.css  mescroll.js</span><br><span class="line"></span><br><span class="line">2.html:</span><br><span class="line">    &lt;!--模拟的标题--&gt;</span><br><span class="line">    &lt;!-- &lt;p class=<span class="string">"header"</span>&gt;</span><br><span class="line">    &lt;a class=<span class="string">"btn-left"</span> href=<span class="string">"javascript:;"</span>&gt;main&lt;/a&gt; </span><br><span class="line">    商品列表</span><br><span class="line">    &lt;a class=<span class="string">"btn-right"</span> href=<span class="string">"javascript:;"</span>&gt;list-news&lt;/a&gt;</span><br><span class="line">    &lt;/p&gt; --&gt;</span><br><span class="line">    &lt;!--滑动区域--&gt;</span><br><span class="line">    &lt;div id=<span class="string">"mescroll"</span> class=<span class="string">"mescroll"</span>&gt;</span><br><span class="line">        &lt;!-- &lt;div class=<span class="string">"notice"</span>&gt;</span><br><span class="line">            标题&lt;br /&gt;描述&lt;br /&gt;</span><br><span class="line">        &lt;p class=<span class="string">"btn-change"</span>&gt;模拟后台修改商品信息&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt; --&gt;</span><br><span class="line">        &lt;!--展示上拉加载的数据列表--&gt;</span><br><span class="line">        &lt;ul id=<span class="string">"dataList"</span> class=<span class="string">"data-list"</span>&gt;</span><br><span class="line">            &lt;!-- &lt;li&gt;</span><br><span class="line">                &lt;img class=<span class="string">"pd-img"</span> src=<span class="string">"res/img/pd1.jpg"</span> /&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-name"</span>&gt;商品标题商品标题商品标题商品标题商品标题商品&lt;/p&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-price"</span>&gt;200.00 元&lt;/p&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-sold"</span>&gt;已售50件&lt;/p&gt;</span><br><span class="line">            &lt;/li&gt; --&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">3.js</span><br><span class="line">    //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;</span><br><span class="line">    var mescroll = new MeScroll(<span class="string">"mescroll"</span>, &#123;</span><br><span class="line">        up: &#123;</span><br><span class="line">            callback: getListData, //上拉回调,此处可简写; 相当于 callback: <span class="keyword">function</span> (page) &#123; getListData(page); &#125;</span><br><span class="line">            isBounce: <span class="literal">false</span>, //此处禁止ios回弹</span><br><span class="line">            clearEmptyId: <span class="string">"dataList"</span>, //1.下拉刷新时会自动先清空此列表,再加入数据; 2.无任何数据时会在此列表自动提示空</span><br><span class="line">            toTop: &#123; //配置回到顶部按钮</span><br><span class="line">                src: <span class="string">"res/img/mescroll-totop.png"</span>, //默认滚动到1000px显示,可配置offset修改</span><br><span class="line">                //offset : 1000</span><br><span class="line">            &#125;,</span><br><span class="line">            lazyLoad: &#123;</span><br><span class="line">                use: <span class="literal">true</span> // 是否开启懒加载,默认<span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    /*加载列表数据 page = &#123; num: 1, size: 10 &#125;; num:当前页 从1开始, size:每页数据条数 */</span><br><span class="line">    <span class="keyword">function</span> getListData(page) &#123;</span><br><span class="line">        //联网加载数据</span><br><span class="line">        getListDataFromNet(page.num, page.size, <span class="keyword">function</span> (curPageData) &#123;</span><br><span class="line"></span><br><span class="line">            //方法一(推荐): 后台接口有返回列表的总页数 totalPage</span><br><span class="line">            //mescroll.endByPage(curPageData.length, totalPage); //必传参数(当前页的数据个数, 总页数)</span><br><span class="line"></span><br><span class="line">            //方法二(推荐): 后台接口有返回列表的总数据量 totalSize</span><br><span class="line">            mescroll.endBySize(curPageData.modelList.length, curPageData.pageCount); //必传参数(当前页的数据个数, 总数据量)</span><br><span class="line"></span><br><span class="line">            //方法三(推荐): 您有其他方式知道是否有下一页 hasNext</span><br><span class="line">            //mescroll.endSuccess(curPageData.length, hasNext); //必传参数(当前页的数据个数, 是否有下一页<span class="literal">true</span>/<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">            //设置列表数据,因为配置了emptyClearId,第一页会清空dataList的数据,所以setListData应该写在最后;</span><br><span class="line">            setListData(curPageData.modelList);</span><br><span class="line">        &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            //联网失败的回调,隐藏下拉刷新和上拉加载的状态;</span><br><span class="line">            mescroll.endErr();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*设置列表数据*/</span><br><span class="line">    <span class="keyword">function</span> setListData(curPageData) &#123;</span><br><span class="line">        console.log(curPageData)</span><br><span class="line">        var listDom = document.getElementById(<span class="string">"dataList"</span>);</span><br><span class="line">        <span class="keyword">for</span> (var i = 0; i &lt; curPageData.length; i++) &#123;</span><br><span class="line">            var pd = curPageData[i];</span><br><span class="line"></span><br><span class="line">            var str = <span class="string">'&lt;img class="pd-img" src="res/img/logo.png" imgurl="'</span> + pd.titleImageUrl + <span class="string">'"/&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-name"&gt;'</span> + pd.source + <span class="string">'&lt;/p&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-price"&gt;'</span> + pd.type + <span class="string">' 元&lt;/p&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-sold"&gt;已售'</span> + pd.type + <span class="string">'件&lt;/p&gt;'</span>;</span><br><span class="line"></span><br><span class="line">            var liDom = document.createElement(<span class="string">"li"</span>);</span><br><span class="line">            liDom.innerHTML = str;</span><br><span class="line">            listDom.appendChild(liDom);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*加载列表数据 */</span><br><span class="line">    <span class="keyword">function</span> getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                <span class="built_in">type</span>: <span class="string">'GET'</span>,</span><br><span class="line">                url: <span class="string">""</span>,</span><br><span class="line">                data: &#123; <span class="built_in">type</span>: 3, pageNo: pageNum, pageSize: pageSize &#125;,</span><br><span class="line">                dataType: <span class="string">'json'</span>,</span><br><span class="line">                success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">                    console.log(data)</span><br><span class="line">                    successCallback(data.data);</span><br><span class="line">                &#125;,</span><br><span class="line">                error: errorCallback</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, 1000)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mescroll</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue接口统一管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -993,80 +1066,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-监听audio加载完成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/%E7%9B%91%E5%90%ACaudio%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90/">监听audio加载完成</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/19/%E7%9B%91%E5%90%ACaudio%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90/" class="archive-article-date">
-  	<time datetime="2020-03-19T03:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=<span class="string">""</span> id=<span class="string">"music"</span>&gt;&lt;/audio&gt;</span><br><span class="line"></span><br><span class="line">var music = document.getElementById(<span class="string">"music"</span>);</span><br><span class="line">music.addEventListener(<span class="string">"canplay"</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">     alert(<span class="string">'mp3加载完成......'</span>)</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">audio</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/19/%E7%9B%91%E5%90%ACaudio%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next</a>
@@ -1155,11 +1154,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1171,7 +1166,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1179,7 +1178,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1191,15 +1190,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1211,15 +1214,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
+                <a href="javascript:void(0)" class="js-tag color5">js swiper</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1227,7 +1226,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">js swiper</a>
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1247,11 +1246,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue .env</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue .env</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1263,10 +1262,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
@@ -1275,15 +1270,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VConsole</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
