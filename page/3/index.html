@@ -326,6 +326,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-腾讯视频播放器js框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/26/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8js%E6%A1%86%E6%9E%B6/">腾讯视频播放器js框架</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/26/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8js%E6%A1%86%E6%9E%B6/" class="archive-article-date">
+  	<time datetime="2020-03-26T08:49:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;div id=<span class="string">"vid"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=<span class="string">"control"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.control &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    background: rgba(0, 0, 0, .6) url(<span class="string">"images/play.png"</span>)no-repeat center;</span><br><span class="line">    background-size: 20%;</span><br><span class="line">    z-index: 100;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">&lt;script src=<span class="string">"https://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">videplayeristx(<span class="string">'q00335hcviu'</span>);</span><br><span class="line">$(<span class="string">".control"</span>).height(screen.availHeight / 3);</span><br><span class="line"></span><br><span class="line">var player;</span><br><span class="line"><span class="keyword">function</span> videplayeristx(id) &#123;</span><br><span class="line">    player = new Txplayer(&#123;</span><br><span class="line">        containerId: <span class="string">'vid'</span>,  /* 点播容器dom的ID */</span><br><span class="line">        vid: id,  /* 点播vid */</span><br><span class="line">        width: <span class="string">'100%'</span>,</span><br><span class="line">        height: screen.availHeight / 3</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">$(<span class="string">".control"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(this).hide();</span><br><span class="line">    player.togglePlayPause();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">链接：https://tgideas.qq.com/doc/frontend/component/common/txplayer.html</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/26/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8js%E6%A1%86%E6%9E%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-input输入框限制输入的长度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -994,80 +1068,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-Swiper轮播-中间大两边小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD-%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/">Swiper轮播-中间大两边小</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD-%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/" class="archive-article-date">
-  	<time datetime="2020-03-02T08:19:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">var mySwiper = new Swiper(<span class="string">".mySwiper"</span>, &#123;</span><br><span class="line">    watchSlidesProgress: <span class="literal">true</span>,</span><br><span class="line">    slidesPerView: <span class="string">'auto'</span>,</span><br><span class="line">    centeredSlides: <span class="literal">true</span>,</span><br><span class="line">    loop: <span class="literal">true</span>,</span><br><span class="line">    loopedSlides: 5,</span><br><span class="line">    on: &#123;</span><br><span class="line">        progress: <span class="keyword">function</span> (progress) &#123;</span><br><span class="line">            <span class="keyword">for</span> (i = 0; i &lt; this.slides.length; i++) &#123;</span><br><span class="line">                var slide = this.slides.eq(i);</span><br><span class="line">                var slideProgress = this.slides[i].progress;</span><br><span class="line">                modify = 1;</span><br><span class="line">                <span class="keyword">if</span> (Math.abs(slideProgress) &gt; 1) &#123;</span><br><span class="line">                    modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;</span><br><span class="line">                &#125;</span><br><span class="line">                translate = slideProgress * modify * 2.3 + <span class="string">'rem'</span>;  /* 景深 */</span><br><span class="line">                scale = 1 - Math.abs(slideProgress) / 5;  /* 缩放 */</span><br><span class="line">                zIndex = 999 - Math.abs(Math.round(10 * slideProgress));</span><br><span class="line">                slide.transform(<span class="string">'translateX('</span> + translate + <span class="string">') scale('</span> + scale + <span class="string">')'</span>);</span><br><span class="line">                slide.css(<span class="string">'zIndex'</span>, zIndex);</span><br><span class="line">                slide.css(<span class="string">'opacity'</span>, 1);</span><br><span class="line">                <span class="keyword">if</span> (Math.abs(slideProgress) &gt; 3) &#123;</span><br><span class="line">                    slide.css(<span class="string">'opacity'</span>, 0);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        setTransition: <span class="keyword">function</span> (transition) &#123;</span><br><span class="line">            <span class="keyword">for</span> (var i = 0; i &lt; this.slides.length; i++) &#123;</span><br><span class="line">                var slide = this.slides.eq(i)</span><br><span class="line">                slide.transition(transition);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swiper</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/02/Swiper%E8%BD%AE%E6%92%AD-%E4%B8%AD%E9%97%B4%E5%A4%A7%E4%B8%A4%E8%BE%B9%E5%B0%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/">Next</a>
@@ -1156,11 +1156,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1168,15 +1168,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Md5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1184,7 +1176,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1192,7 +1188,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1201,6 +1197,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1224,19 +1224,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">js split</a>
+                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">js split</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1252,11 +1252,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1280,11 +1280,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
               </li>
             
             <div class="clearfix"></div>
