@@ -326,6 +326,300 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JsonBird解决前端跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">JsonBird解决前端跨域</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
+  	<time datetime="2019-12-17T02:10:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">免费的HTTP接口代理:</span><br><span class="line">1.让不支持跨域的远程数据接口支持跨域。</span><br><span class="line">2.让不支持JSONP的远程数据接口支持JSONP(添加参数&amp;callback=cb_name)。</span><br><span class="line">3.提供专业的HTTPS解决方案，让数据传输更安全(同时解决远程数据接口不支持HTTPS的问题)。</span><br><span class="line">4.多种数据请求方式与返回格式。</span><br><span class="line">5.丰富的数据接口 ...</span><br><span class="line"></span><br><span class="line">使用：</span><br><span class="line">https://bird.ioliu.cn/v1/?url=链接</span><br><span class="line">url后面拼接你想要跨域的链接</span><br><span class="line"></span><br><span class="line">链接：https://bird.ioliu.cn/</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JsonBird</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-onclick传参报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/">onclick传参报错</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/" class="archive-article-date">
+  	<time datetime="2019-12-09T06:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">报错：Uncaught SyntaxError: missing ) after argument list</span><br><span class="line">如果有动态数据写入的话，请注意转义动态数据</span><br><span class="line">转义符<span class="string">"\'"</span>或者<span class="string">"\""</span></span><br><span class="line">eg:&lt;p class=<span class="string">"get_letter"</span> onclick=<span class="string">"jumpPage(\'' + value.src + '\');"</span>&gt;获取感谢函&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/wx-ym-good/p/6702890.html</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-html2canvas生成图片下载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/">html2canvas生成图片下载</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/" class="archive-article-date">
+  	<time datetime="2019-12-05T06:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/* 生成图片 */</span><br><span class="line"><span class="keyword">function</span> greatCanvas(el, imgSrc, state) &#123;</span><br><span class="line">    html2canvas(document.querySelector(el), &#123; background: null, useCORS: <span class="literal">true</span> &#125;).<span class="keyword">then</span>(<span class="keyword">function</span> (canvas) &#123;</span><br><span class="line">        download(canvas.toDataURL(<span class="string">"image/png"</span>));   //调用下载方法</span><br><span class="line">        $(imgSrc).attr(<span class="string">"src"</span>, canvas.toDataURL(<span class="string">"image/png"</span>));</span><br><span class="line">        $(state).css(<span class="string">"z-index"</span>, <span class="string">"-1"</span>);</span><br><span class="line">        hideLoading();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 下载方法 */</span><br><span class="line"><span class="keyword">function</span> download(imgData) &#123;</span><br><span class="line">    downloadFile(<span class="string">'Invitation.png'</span>, imgData);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> downloadFile(fileName, content) &#123;</span><br><span class="line">    <span class="built_in">let</span> aLink = document.createElement(<span class="string">'a'</span>);</span><br><span class="line">    <span class="built_in">let</span> blob = this.base64ToBlob(content);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> evt = document.createEvent(<span class="string">"HTMLEvents"</span>);</span><br><span class="line">    evt.initEvent(<span class="string">"click"</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    aLink.download = fileName;</span><br><span class="line">    aLink.href = URL.createObjectURL(blob);</span><br><span class="line">    aLink.click()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> base64ToBlob(code) &#123;</span><br><span class="line">    <span class="built_in">let</span> parts = code.split(<span class="string">';base64,'</span>);</span><br><span class="line">    <span class="built_in">let</span> contentType = parts[0].split(<span class="string">':'</span>)[1];</span><br><span class="line">    <span class="built_in">let</span> raw = window.atob(parts[1]);</span><br><span class="line">    <span class="built_in">let</span> rawLength = raw.length;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> uInt8Array = new Uint8Array(rawLength);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; rawLength; ++i) &#123;</span><br><span class="line">        uInt8Array[i] = raw.charCodeAt(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> new Blob([uInt8Array], &#123; <span class="built_in">type</span>: contentType &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html2canvas</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-点击input输入框页面弹起问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">点击input输入框页面弹起问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2019-12-04T08:18:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var u = navigator.userAgent;</span><br><span class="line">var isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Adr'</span>) &gt; -1;</span><br><span class="line">var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);</span><br><span class="line"><span class="keyword">if</span> (isiOS == <span class="literal">true</span>) &#123;</span><br><span class="line">	$(<span class="string">"input,select"</span>).blur(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">			var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;</span><br><span class="line">			window.scrollTo(0, Math.max(scrollHeight - 1, 0));</span><br><span class="line">		&#125;, 100);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (isAndroid == <span class="literal">true</span>) &#123;</span><br><span class="line">	var jh = $(window).height();</span><br><span class="line">	$(window).resize(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		var thisHeight = $(this).height();</span><br><span class="line">		<span class="keyword">if</span> (jh - thisHeight &gt; 50) &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, jh + <span class="string">'px'</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, <span class="string">'100%'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-禁止页面横屏显示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -770,299 +1064,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-video-js使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/17/video-js%E4%BD%BF%E7%94%A8/">video.js使用</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/17/video-js%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2019-11-17T05:21:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/video-js.min.css"</span> /&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/video.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"sleepVideo_box"</span>&gt;</span><br><span class="line">    &lt;video id=<span class="string">"sleepVideo-player"</span> class=<span class="string">"video-js sleepVideo_video"</span> preload=<span class="string">"auto"</span> poster=<span class="string">"预览图片"</span> playsinline=<span class="string">"true"</span> data-setup=<span class="string">'&#123;&#125;'</span>&gt;</span><br><span class="line">        &lt;<span class="built_in">source</span> src=<span class="string">"视频路径"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;&lt;/<span class="built_in">source</span>&gt;</span><br><span class="line">    &lt;/video&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">poster预览图单个视频可以，多个视频ios会有图片闪烁问题。</span><br><span class="line">可以背景添加预览图</span><br><span class="line">.vjs-poster&#123;background-size: 100% 100%;&#125;</span><br><span class="line">.container .video-js&#123;background: url(<span class="string">"../images/videoBg.png"</span>) no-repeat;background-size: 100% 100%;&#125;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.vjs-poster&#123;background-size: 100% 100%;&#125;   //poster全屏展示</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">var sleepVideo_player = videojs(<span class="string">'sleepVideo-player'</span>, &#123;   //配置</span><br><span class="line">    controls: <span class="literal">false</span>,</span><br><span class="line">    children: &#123;</span><br><span class="line">        controlBar: &#123;</span><br><span class="line">            fullscreenToggle: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="keyword">function</span> <span class="function"><span class="title">onPlayerReady</span></span>() &#123;</span><br><span class="line">    this.on(<span class="string">"ended"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">sleepVideo_player.play();   //播放</span><br><span class="line">sleepVideo_player.pause();   //暂停</span><br><span class="line">sleepVideo_player.src(&#123; src: <span class="string">""</span>, <span class="built_in">type</span>: <span class="string">"video/mp4"</span> &#125;);   //切换视频</span><br><span class="line"></span><br><span class="line">链接：https://blog.csdn.net/a0405221/article/details/80923090</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">video</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/video-js%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Swiper设置slideToClickedSlide没效果" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/">Swiper设置slideToClickedSlide没效果</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/" class="archive-article-date">
-  	<time datetime="2019-11-11T07:57:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">slideToClickedSlide设置为<span class="literal">true</span>则点击slide会过渡到这个slide</span><br><span class="line"></span><br><span class="line">&lt;script language=<span class="string">"javascript"</span>&gt; </span><br><span class="line">  var mySwiper = new Swiper(<span class="string">'.swiper-container'</span>,&#123;</span><br><span class="line">    slideToClickedSlide: <span class="literal">true</span>,</span><br><span class="line">    centeredSlides : <span class="literal">true</span>,</span><br><span class="line">    slidesPerView : 3,</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">父元素swiper设置effect : <span class="string">'fade'</span>,会默认pointer-events: none;</span><br><span class="line">单独设置pointer-events: auto;</span><br><span class="line"></span><br><span class="line">链接：https://www.swiper.com.cn/api/clicks/207.html</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swiper</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/11/Swiper%E8%AE%BE%E7%BD%AEslideToClickedSlide%E6%B2%A1%E6%95%88%E6%9E%9C/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Md5签名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/">Md5签名</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/" class="archive-article-date">
-  	<time datetime="2019-11-11T07:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">html与后端接口访问，为了简单的安全验证，需要做一下签名处理</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">    &lt;title&gt;MD5签名&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script src=<span class="string">"./jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">"./md5.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var userId = <span class="string">'0b44baa65b90727f015b9076a38a0001'</span>;</span><br><span class="line">        var timestamp = <span class="string">'1558494714737'</span></span><br><span class="line">        var t1 = userId + timestamp;</span><br><span class="line">        var s1 = $.md5(t1);</span><br><span class="line">        console.log(s1);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">链接：https://jayden.matchcess.com/2019/11/07/java/md5/Java%E5%92%8CJquery%20Md5%E5%81%9A%E6%8E%A5%E5%8F%A3%E7%AD%BE%E5%90%8D/<span class="comment">#more</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Md5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/11/Md5%E7%AD%BE%E5%90%8D/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-H5视频全屏播放" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">H5视频全屏播放</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/" class="archive-article-date">
-  	<time datetime="2019-11-11T07:40:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;div class=<span class="string">"homeVideo_box"</span>&gt;</span><br><span class="line">    &lt;video class=<span class="string">"homeVideo_video"</span> id=<span class="string">"homeVideo_video"</span> webkit-playsinline=<span class="string">"true"</span> x5-video-player-type=<span class="string">"h5"</span></span><br><span class="line">        x5-video-player-fullscreen=<span class="string">"true"</span> playsinline=<span class="string">"true"</span> preload=<span class="string">"auto"</span> src=<span class="string">"视频路径"</span></span><br><span class="line">        poster=<span class="string">"images/sleepVideo_img1.png"</span>&gt;&lt;/video&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_play abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/sleepVideo_play.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"homeVideo_jump abs"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"images/homeVideo_jump.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">/* 开始视频homeVideo */</span><br><span class="line">.homeVideo_box&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 9;overflow: hidden;background: <span class="comment">#000;&#125;</span></span><br><span class="line">.homeVideo_video&#123;width: 100%;height: 100%;position: absolute;left: 0;top: 0;&#125;</span><br><span class="line">.homeVideo_play&#123;width: 20%;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);&#125;</span><br><span class="line">.homeVideo_jump&#123;width: 18%;right: 5%;top: 4%;&#125;</span><br><span class="line">video&#123;object-fit: fill;object-position: center center;&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">/* 开始视频 */</span><br><span class="line">$(<span class="string">".homeVideo_play"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_play"</span>).hide();</span><br><span class="line">    $(<span class="string">".homeVideo_video"</span>)[0].play();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 开始视频播放完 */</span><br><span class="line">var homeVideo_video = document.getElementById(<span class="string">"homeVideo_video"</span>);</span><br><span class="line">homeVideo_video.onended = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/* 点击跳过视频 */</span><br><span class="line">$(<span class="string">".homeVideo_jump"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".homeVideo_box"</span>).remove();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">video</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/11/H5%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E6%92%AD%E6%94%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">Next</a>
@@ -1151,15 +1152,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1171,11 +1164,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1183,7 +1180,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1195,15 +1200,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+                <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1223,11 +1224,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
+                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1259,11 +1260,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

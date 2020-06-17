@@ -326,6 +326,300 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-正则验证中英文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/14/%E6%AD%A3%E5%88%99%E9%AA%8C%E8%AF%81%E4%B8%AD%E8%8B%B1%E6%96%87/">正则验证中英文</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/14/%E6%AD%A3%E5%88%99%E9%AA%8C%E8%AF%81%E4%B8%AD%E8%8B%B1%E6%96%87/" class="archive-article-date">
+  	<time datetime="2020-01-14T07:18:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* 判断是否是中文 */</span><br><span class="line">var pattern = new RegExp(<span class="string">"[\u4E00-\u9FA5]+"</span>);</span><br><span class="line"></span><br><span class="line">/* 验证中文5位/英文10位 */</span><br><span class="line">var reg = /^[\u4E00-\u9FA5]&#123;1,5&#125;$|^[A-Za-z]&#123;1,10&#125;$/;</span><br><span class="line">reg.test(验证值) == <span class="literal">true</span> </span><br><span class="line">reg.test(验证值) == <span class="literal">false</span> </span><br><span class="line"></span><br><span class="line">/* 验证中文7位 */</span><br><span class="line">var han = /^[\u4E00-\u9FA5]&#123;1,7&#125;$/;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/14/%E6%AD%A3%E5%88%99%E9%AA%8C%E8%AF%81%E4%B8%AD%E8%8B%B1%E6%96%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js预加载字体" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/07/js%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%AD%97%E4%BD%93/">js预加载字体</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/07/js%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%AD%97%E4%BD%93/" class="archive-article-date">
+  	<time datetime="2020-01-07T03:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">/* 加载字体文件 */</span><br><span class="line">loadFont(&#123;</span><br><span class="line">    cssValue: <span class="string">'hyds'</span>,</span><br><span class="line">    url: <span class="string">'css/hyds.ttf'</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> loadFont(obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (document.fonts &amp;&amp; !this.checkFont(obj.cssValue)) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = new FontFace(obj.cssValue, `<span class="built_in">local</span>(<span class="string">'$&#123;obj.cssValue&#125;'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>) format(<span class="string">'ttf'</span>),url(<span class="string">'$&#123;obj.url&#125;'</span>)`);</span><br><span class="line">        fontFace.load().<span class="keyword">then</span>(<span class="keyword">function</span> (loadedFontFace) &#123;</span><br><span class="line">            document.fonts.add(loadedFontFace);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 检测字体文件是否已加载 */</span><br><span class="line"><span class="keyword">function</span> checkFont(name) &#123;</span><br><span class="line">    <span class="built_in">let</span> values = document.fonts.values();</span><br><span class="line">    <span class="built_in">let</span> isHave = <span class="literal">false</span>;</span><br><span class="line">    <span class="built_in">let</span> item = values.next();</span><br><span class="line">    <span class="keyword">while</span> (!item.done &amp;&amp; !isHave) &#123;</span><br><span class="line">        <span class="built_in">let</span> fontFace = item.value;</span><br><span class="line">        <span class="keyword">if</span> (fontFace.family == name) &#123;</span><br><span class="line">            isHave = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        item = values.next();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> isHave;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/bjf784022747/articles/10337004.html</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/07/js%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%AD%97%E4%BD%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-input的三个属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/06/input%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B1%9E%E6%80%A7/">input的三个属性</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/06/input%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2020-01-06T02:42:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">autocomplete：默认为on，其含义代表是否让浏览器自动记录输入的值。</span><br><span class="line">提示：在某些浏览器中，您可能需要手动启用自动完成功能。</span><br><span class="line"></span><br><span class="line">autocapitalize：自动大小写</span><br><span class="line">当设置了autocapitalize=<span class="string">"words"</span>时，每个单词的开头字母会自动大写。</span><br><span class="line">当设置了autocapitalize=<span class="string">"characters"</span> 时，每个字母都会大写。</span><br><span class="line">当设置了autocapitalize=<span class="string">"sentences"</span> 时，每句开头字母会自动大写。</span><br><span class="line"></span><br><span class="line">autocorrect：纠错/自动更正</span><br><span class="line"></span><br><span class="line">链接：http://www.oicqzone.com/pc/2015033021322.html</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html input</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/06/input%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js日期时间排序正-反序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/">js日期时间排序正/反序</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2020-01-02T06:17:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="built_in">type</span>: <span class="string">"GET"</span>,</span><br><span class="line">    url: <span class="string">"data.json"</span>,</span><br><span class="line">    dataType: <span class="string">"json"</span>,</span><br><span class="line">    success: <span class="keyword">function</span> (res) &#123;</span><br><span class="line">        //方法调用</span><br><span class="line">        console.log(ForwardRankingDate(res.dataContent, <span class="string">"received"</span>));  //2017-01-18 13:23:21</span><br><span class="line">        console.log(ForwardDate(res.dataContent));</span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="keyword">function</span> (res) &#123;</span><br><span class="line">        alert(<span class="string">"请求失败"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 方法一： */</span><br><span class="line"></span><br><span class="line">//正序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ForwardRankingDate(data, p) &#123;</span><br><span class="line">    <span class="keyword">for</span> (i = 0; i &lt; data.length - 1; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = 0; j &lt; data.length - 1 - i; j++) &#123;</span><br><span class="line">            console.log(Date.parse(data[j][p]));</span><br><span class="line">            <span class="keyword">if</span> (Date.parse(data[j][p]) &gt; Date.parse(data[j + 1][p])) &#123;</span><br><span class="line">                var temp = data[j];</span><br><span class="line">                data[j] = data[j + 1];</span><br><span class="line">                data[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//反序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ReverseRankingDate(data, p) &#123;</span><br><span class="line">    <span class="keyword">for</span> (i = 0; i &lt; data.length - 1; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = 0; j &lt; data.length - 1 - i; j++) &#123;</span><br><span class="line">            console.log(Date.parse(data[j][p]));</span><br><span class="line">            <span class="keyword">if</span> (Date.parse(data[j][p]) &lt; Date.parse(data[j + 1][p])) &#123;</span><br><span class="line">                var temp = data[j];</span><br><span class="line">                data[j] = data[j + 1];</span><br><span class="line">                data[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 方法二： */</span><br><span class="line"></span><br><span class="line">//正序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ForwardDate(data) &#123;</span><br><span class="line">    data.sort((a, b) =&gt; &#123;</span><br><span class="line">        <span class="built_in">return</span> a.received &gt; b.received ? 1 : -1;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//反序日期排序方法</span><br><span class="line"><span class="keyword">function</span> ReverseDate(data) &#123;</span><br><span class="line">    data.sort((a, b) =&gt; &#123;</span><br><span class="line">        <span class="built_in">return</span> a.received &lt; b.received ? 1 : -1;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/02/js%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F%E6%AD%A3-%E5%8F%8D%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-clipboard拷贝文字简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -767,300 +1061,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-JsonBird解决前端跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">JsonBird解决前端跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2019-12-17T02:10:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">免费的HTTP接口代理:</span><br><span class="line">1.让不支持跨域的远程数据接口支持跨域。</span><br><span class="line">2.让不支持JSONP的远程数据接口支持JSONP(添加参数&amp;callback=cb_name)。</span><br><span class="line">3.提供专业的HTTPS解决方案，让数据传输更安全(同时解决远程数据接口不支持HTTPS的问题)。</span><br><span class="line">4.多种数据请求方式与返回格式。</span><br><span class="line">5.丰富的数据接口 ...</span><br><span class="line"></span><br><span class="line">使用：</span><br><span class="line">https://bird.ioliu.cn/v1/?url=链接</span><br><span class="line">url后面拼接你想要跨域的链接</span><br><span class="line"></span><br><span class="line">链接：https://bird.ioliu.cn/</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JsonBird</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/17/JsonBird%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-onclick传参报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/">onclick传参报错</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/" class="archive-article-date">
-  	<time datetime="2019-12-09T06:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">报错：Uncaught SyntaxError: missing ) after argument list</span><br><span class="line">如果有动态数据写入的话，请注意转义动态数据</span><br><span class="line">转义符<span class="string">"\'"</span>或者<span class="string">"\""</span></span><br><span class="line">eg:&lt;p class=<span class="string">"get_letter"</span> onclick=<span class="string">"jumpPage(\'' + value.src + '\');"</span>&gt;获取感谢函&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">链接：https://www.cnblogs.com/wx-ym-good/p/6702890.html</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/09/onclick%E4%BC%A0%E5%8F%82%E6%8A%A5%E9%94%99/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html2canvas生成图片下载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/">html2canvas生成图片下载</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/" class="archive-article-date">
-  	<time datetime="2019-12-05T06:20:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/* 生成图片 */</span><br><span class="line"><span class="keyword">function</span> greatCanvas(el, imgSrc, state) &#123;</span><br><span class="line">    html2canvas(document.querySelector(el), &#123; background: null, useCORS: <span class="literal">true</span> &#125;).<span class="keyword">then</span>(<span class="keyword">function</span> (canvas) &#123;</span><br><span class="line">        download(canvas.toDataURL(<span class="string">"image/png"</span>));   //调用下载方法</span><br><span class="line">        $(imgSrc).attr(<span class="string">"src"</span>, canvas.toDataURL(<span class="string">"image/png"</span>));</span><br><span class="line">        $(state).css(<span class="string">"z-index"</span>, <span class="string">"-1"</span>);</span><br><span class="line">        hideLoading();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 下载方法 */</span><br><span class="line"><span class="keyword">function</span> download(imgData) &#123;</span><br><span class="line">    downloadFile(<span class="string">'Invitation.png'</span>, imgData);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> downloadFile(fileName, content) &#123;</span><br><span class="line">    <span class="built_in">let</span> aLink = document.createElement(<span class="string">'a'</span>);</span><br><span class="line">    <span class="built_in">let</span> blob = this.base64ToBlob(content);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> evt = document.createEvent(<span class="string">"HTMLEvents"</span>);</span><br><span class="line">    evt.initEvent(<span class="string">"click"</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    aLink.download = fileName;</span><br><span class="line">    aLink.href = URL.createObjectURL(blob);</span><br><span class="line">    aLink.click()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> base64ToBlob(code) &#123;</span><br><span class="line">    <span class="built_in">let</span> parts = code.split(<span class="string">';base64,'</span>);</span><br><span class="line">    <span class="built_in">let</span> contentType = parts[0].split(<span class="string">':'</span>)[1];</span><br><span class="line">    <span class="built_in">let</span> raw = window.atob(parts[1]);</span><br><span class="line">    <span class="built_in">let</span> rawLength = raw.length;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> uInt8Array = new Uint8Array(rawLength);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; rawLength; ++i) &#123;</span><br><span class="line">        uInt8Array[i] = raw.charCodeAt(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> new Blob([uInt8Array], &#123; <span class="built_in">type</span>: contentType &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html2canvas</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/05/html2canvas%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-点击input输入框页面弹起问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">点击input输入框页面弹起问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2019-12-04T08:18:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var u = navigator.userAgent;</span><br><span class="line">var isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Adr'</span>) &gt; -1;</span><br><span class="line">var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);</span><br><span class="line"><span class="keyword">if</span> (isiOS == <span class="literal">true</span>) &#123;</span><br><span class="line">	$(<span class="string">"input,select"</span>).blur(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">			var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0;</span><br><span class="line">			window.scrollTo(0, Math.max(scrollHeight - 1, 0));</span><br><span class="line">		&#125;, 100);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (isAndroid == <span class="literal">true</span>) &#123;</span><br><span class="line">	var jh = $(window).height();</span><br><span class="line">	$(window).resize(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		var thisHeight = $(this).height();</span><br><span class="line">		<span class="keyword">if</span> (jh - thisHeight &gt; 50) &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, jh + <span class="string">'px'</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			$(<span class="string">'body'</span>).css(<span class="string">'height'</span>, <span class="string">'100%'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/04/%E7%82%B9%E5%87%BBinput%E8%BE%93%E5%85%A5%E6%A1%86%E9%A1%B5%E9%9D%A2%E5%BC%B9%E8%B5%B7%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/4/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">Next</a>
@@ -1149,15 +1149,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">video</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1169,11 +1161,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color1">video</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1181,7 +1177,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1193,15 +1197,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+                <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1221,11 +1221,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
+                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1257,11 +1257,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
