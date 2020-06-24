@@ -336,6 +336,80 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vue配置环境变量env" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/">vue配置环境变量env</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/" class="archive-article-date">
+  	<time datetime="2020-04-14T08:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">.env全局默认配置文件，无论什么环境都会加载合并，可以配置多种环境加载</span><br><span class="line"></span><br><span class="line">根目录</span><br><span class="line">.env.sit</span><br><span class="line">.env.uat</span><br><span class="line">.env.prod</span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'sit'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'uat'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'prod'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">package.json</span><br><span class="line"><span class="string">"scripts"</span></span><br><span class="line"><span class="string">"sit-serve"</span>: <span class="string">"vue-cli-service serve --mode sit"</span>,</span><br><span class="line"><span class="string">"uat-serve"</span>: <span class="string">"vue-cli-service serve --mode uat"</span>,</span><br><span class="line"><span class="string">"prod-serve"</span>: <span class="string">"vue-cli-service serve --mode prod"</span>,</span><br><span class="line"><span class="string">"sit-build"</span>: <span class="string">"vue-cli-service build --mode sit"</span>,</span><br><span class="line"><span class="string">"uat-build"</span>: <span class="string">"vue-cli-service build --mode uat"</span>,</span><br><span class="line"><span class="string">"prod-build"</span>: <span class="string">"vue-cli-service build --mode prod"</span></span><br><span class="line"></span><br><span class="line">http.js</span><br><span class="line">//process.env.NODE_ENV === <span class="string">"production"</span>  //生产</span><br><span class="line">axios.defaults.baseURL = process.env.VUE_APP_URL;   //配置接口地址</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue .env</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-is方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1004,80 +1078,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-页面内容可编辑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/18/%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E5%8F%AF%E7%BC%96%E8%BE%91/">页面内容可编辑</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/18/%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E5%8F%AF%E7%BC%96%E8%BE%91/" class="archive-article-date">
-  	<time datetime="2020-03-18T10:17:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.body.contentEditable = <span class="literal">true</span></span><br><span class="line">给body标签设置了contentEditable属性为<span class="literal">true</span>，也就是说body标签下的内容都被设置成了可编辑状态。</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/18/%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E5%8F%AF%E7%BC%96%E8%BE%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/">Next</a>
@@ -1174,7 +1174,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1182,7 +1182,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1198,7 +1198,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1206,11 +1206,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">html input</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1226,6 +1222,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">html input</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
@@ -1234,15 +1234,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1262,15 +1262,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1290,11 +1290,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>

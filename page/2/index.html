@@ -336,6 +336,79 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js和ios交互调试接口" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/29/js%E5%92%8Cios%E4%BA%A4%E4%BA%92%E8%B0%83%E8%AF%95%E6%8E%A5%E5%8F%A3/">js和ios交互调试接口</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/29/js%E5%92%8Cios%E4%BA%A4%E4%BA%92%E8%B0%83%E8%AF%95%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
+  	<time datetime="2020-05-29T06:23:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">1.引入coco3gNativeUser.js</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> c3_navtive_user = &#123;&#125;;</span><br><span class="line">(<span class="keyword">function</span>(owner) &#123;</span><br><span class="line">  owner.temp = &#123;&#125;;</span><br><span class="line">  //右上角按钮及事件</span><br><span class="line">  owner.__defineSetter__(<span class="string">"right_button_item"</span>, <span class="keyword">function</span>(item) &#123;</span><br><span class="line">    this._right_button_item = item;</span><br><span class="line">  &#125;);</span><br><span class="line">  owner.__defineGetter__(<span class="string">"right_button_item"</span>, <span class="keyword">function</span>(item) &#123;</span><br><span class="line">    <span class="built_in">return</span> this._right_button_item;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">if</span> (!owner.doActionSync) &#123;</span><br><span class="line">    owner.doActionSync = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      alert(<span class="string">"客户端尚未实现该方法"</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  owner.doActionAnsy = <span class="keyword">function</span>(action, param, callback) &#123;</span><br><span class="line">    var temp = owner.temp;</span><br><span class="line">    <span class="keyword">if</span> (!param) &#123;</span><br><span class="line">      param = &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    var callbackTag = <span class="string">"callback_"</span> + new Date().getTime();</span><br><span class="line">    temp[callbackTag] = callback;</span><br><span class="line">    param.callbackTag = callbackTag;</span><br><span class="line">    var path = <span class="string">"http://coco3g-app/"</span> + action + <span class="string">"?"</span>;</span><br><span class="line">    <span class="keyword">for</span> (var p <span class="keyword">in</span> param) &#123;</span><br><span class="line">      path += p + <span class="string">"="</span> + param[p] + <span class="string">"&amp;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    window.location.href = path;</span><br><span class="line">    <span class="built_in">return</span> callbackTag;</span><br><span class="line">  &#125;;</span><br><span class="line">  owner.doActionJson = <span class="keyword">function</span>(action, param, callback) &#123;</span><br><span class="line">    var temp = owner.temp;</span><br><span class="line">    var callbackTag = <span class="string">"callback_"</span> + new Date().getTime();</span><br><span class="line">    temp[callbackTag] = callback;</span><br><span class="line">    jsondata = &#123;&#125;;</span><br><span class="line">    jsondata.callback = callbackTag;</span><br><span class="line">    jsondata.data = param;</span><br><span class="line">    var path = <span class="string">"http://coco3g-app/"</span> + action + <span class="string">"?"</span> + JSON.stringify(jsondata);</span><br><span class="line">    window.location.href = path;</span><br><span class="line">    <span class="built_in">return</span> callbackTag;</span><br><span class="line">  &#125;;</span><br><span class="line">  owner.doActionFunc = <span class="keyword">function</span>(action, param, callback) &#123;</span><br><span class="line">    var temp = owner.temp;</span><br><span class="line">    var callbackTag = <span class="string">"callback_"</span> + new Date().getTime();</span><br><span class="line">    temp[callbackTag] = callback;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!param) &#123;</span><br><span class="line">      param = &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">"undefined"</span> == typeof CocoObj) &#123;</span><br><span class="line">      window.webkit.messageHandlers.XJJsToOC.postMessage(&#123;</span><br><span class="line">        protocol: action,</span><br><span class="line">        data: param,</span><br><span class="line">        callback: callbackTag</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      var paramstring = JSON.stringify(&#123;</span><br><span class="line">        protocol: action,</span><br><span class="line">        data: param,</span><br><span class="line">        callback: callbackTag</span><br><span class="line">      &#125;);</span><br><span class="line">      javascript: CocoObj.XJJsToOC(paramstring);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  owner.callback = <span class="keyword">function</span>(callbackTag, result) &#123;</span><br><span class="line">    // console.log(<span class="string">"result1"</span>, callbackTag)</span><br><span class="line">    var callbackFun = owner.temp[callbackTag];</span><br><span class="line">    // console.log(<span class="string">"result2"</span>, result);</span><br><span class="line">    <span class="keyword">if</span> (callbackFun) &#123;</span><br><span class="line">      callbackFun(result);</span><br><span class="line">    &#125;</span><br><span class="line">    // delete owner.temp[callbackTag];</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;)(c3_navtive_user);</span><br><span class="line"></span><br><span class="line">2.调用方法</span><br><span class="line">var protocol = <span class="string">"personalSave"</span>;  //方法名</span><br><span class="line">var parameter = &#123;  //参数</span><br><span class="line">    <span class="string">"page"</span>: 1,</span><br><span class="line">&#125;</span><br><span class="line">c3_navtive_user.doActionFunc(protocol, parameter, <span class="keyword">function</span> (data) &#123; </span><br><span class="line">    var data = JSON.parse(data);</span><br><span class="line">    console.log(data);</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ios</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/29/js%E5%92%8Cios%E4%BA%A4%E4%BA%92%E8%B0%83%E8%AF%95%E6%8E%A5%E5%8F%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue避免生产环境看到源码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -998,80 +1071,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-vue配置环境变量env" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/">vue配置环境变量env</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/" class="archive-article-date">
-  	<time datetime="2020-04-14T08:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">.env全局默认配置文件，无论什么环境都会加载合并，可以配置多种环境加载</span><br><span class="line"></span><br><span class="line">根目录</span><br><span class="line">.env.sit</span><br><span class="line">.env.uat</span><br><span class="line">.env.prod</span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'sit'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'uat'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">MODE_ENV = <span class="string">'prod'</span></span><br><span class="line">VUE_APP_URL = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">package.json</span><br><span class="line"><span class="string">"scripts"</span></span><br><span class="line"><span class="string">"sit-serve"</span>: <span class="string">"vue-cli-service serve --mode sit"</span>,</span><br><span class="line"><span class="string">"uat-serve"</span>: <span class="string">"vue-cli-service serve --mode uat"</span>,</span><br><span class="line"><span class="string">"prod-serve"</span>: <span class="string">"vue-cli-service serve --mode prod"</span>,</span><br><span class="line"><span class="string">"sit-build"</span>: <span class="string">"vue-cli-service build --mode sit"</span>,</span><br><span class="line"><span class="string">"uat-build"</span>: <span class="string">"vue-cli-service build --mode uat"</span>,</span><br><span class="line"><span class="string">"prod-build"</span>: <span class="string">"vue-cli-service build --mode prod"</span></span><br><span class="line"></span><br><span class="line">http.js</span><br><span class="line">//process.env.NODE_ENV === <span class="string">"production"</span>  //生产</span><br><span class="line">axios.defaults.baseURL = process.env.VUE_APP_URL;   //配置接口地址</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue .env</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/vue%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8Fenv/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">Next</a>
@@ -1168,7 +1167,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1176,7 +1175,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
+                <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1192,7 +1191,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1200,11 +1199,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">html input</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1220,6 +1215,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">html input</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
               </li>
              
@@ -1228,15 +1227,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mobiscroll select</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laydate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1256,15 +1255,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1284,11 +1283,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">xss HtmlSanitizer</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
