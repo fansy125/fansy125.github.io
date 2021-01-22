@@ -336,6 +336,153 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js页面跳转顶部底部" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/12/js%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%A1%B6%E9%83%A8%E5%BA%95%E9%83%A8/">js页面跳转顶部底部</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/12/js%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%A1%B6%E9%83%A8%E5%BA%95%E9%83%A8/" class="archive-article-date">
+  	<time datetime="2020-06-12T02:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/* 页面跳转顶部/底部 */</span><br><span class="line"><span class="keyword">function</span> goToWhere(<span class="built_in">where</span>) &#123;</span><br><span class="line">    var me = this;</span><br><span class="line">    me.site = [];</span><br><span class="line">    me.sleep = me.sleep ? me.sleep : 16;</span><br><span class="line">    me.fx = me.fx ? me.fx : 6;</span><br><span class="line">    clearInterval(me.interval);</span><br><span class="line">    var dh = document.documentElement.scrollHeight || document.body.scrollHeight;</span><br><span class="line">    var height = !!<span class="built_in">where</span> ? dh : 0;</span><br><span class="line">    me.interval = setInterval(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        var top = document.documentElement.scrollTop || document.body.scrollTop;</span><br><span class="line">        var speed = (height - top) / me.fx;</span><br><span class="line">        <span class="keyword">if</span> (speed === me.site[0]) &#123;</span><br><span class="line">            window.scrollTo(0, height);</span><br><span class="line">            clearInterval(me.interval);</span><br><span class="line">        &#125;</span><br><span class="line">        window.scrollBy(0, speed);</span><br><span class="line">        me.site.unshift(speed);</span><br><span class="line">    &#125;, me.sleep);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">goToWhere(0);  //顶部</span><br><span class="line">goToWhere(1);  //底部</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/12/js%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E9%A1%B6%E9%83%A8%E5%BA%95%E9%83%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-loading加载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/10/loading%E5%8A%A0%E8%BD%BD/">loading加载</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/10/loading%E5%8A%A0%E8%BD%BD/" class="archive-article-date">
+  	<time datetime="2020-06-10T02:21:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;div class=<span class="string">"loading"</span>&gt;</span><br><span class="line">&lt;div class=<span class="string">"loadingMain"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"load_progress_bar abs"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"bar_1 abs"</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"bar_2 abs"</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"load_clock abs animated infinite tada"</span>&gt;</span><br><span class="line">            &lt;img src=<span class="string">"images/clock.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"loading_txt"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"img_wrapper"</span> style=<span class="string">"display: none;"</span> class=<span class="string">"img_wrapper"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.loading&#123;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: <span class="comment">#1b3486;z-index: 99;&#125;</span></span><br><span class="line">.loadingMain&#123;width: 100%;height: 100%;&#125;</span><br><span class="line">.load_progress_bar&#123;width: 65%;height: 1.1%;top: 40%;left: 0;right: 0;margin: 0 auto;&#125;</span><br><span class="line">.bar_1&#123;background-color: <span class="comment">#fff;width: 100%;height: 100%;left: 0;top: 0;border-radius: 5px;&#125;</span></span><br><span class="line">.bar_2&#123;background-color: <span class="comment">#d31145;width: 0;height: 100%;left: 0;top: 0;border-radius: 5px;&#125;</span></span><br><span class="line">.loading_txt&#123;text-align: center;color: <span class="comment">#fff;margin-top: 10%;font-weight: bold;font-size: 0.3rem;&#125;</span></span><br><span class="line">.load_clock&#123;width: 15%;left: 0;right: 0;margin: 0 auto;margin-top: -30%;&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">var loadImgforFirstEntry = &#123;</span><br><span class="line">	wrapper: null, // 临时图片存放dom</span><br><span class="line">	progress_bar: null, // 进度条dom</span><br><span class="line">	rat: null, // 显示百分数的dom</span><br><span class="line">	imgCount: 0, // 图片总数</span><br><span class="line">	loadedCount: 0, // 已加载完成数</span><br><span class="line">	init: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">	    this.wrapper = $(<span class="string">'#img_wrapper'</span>)</span><br><span class="line">	    this.progress_bar = $(<span class="string">'.bar_2'</span>)</span><br><span class="line">	    this.rat = $(<span class="string">'.loading_txt'</span>)</span><br><span class="line">	    this.bind()</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="built_in">bind</span>:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		this.getImg();</span><br><span class="line">	&#125;,</span><br><span class="line">	getImg: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		var _this = this</span><br><span class="line">		$(<span class="string">'body *'</span>).each(<span class="keyword">function</span>(i)&#123;</span><br><span class="line">			var oThis = $(this),</span><br><span class="line">				src = <span class="string">''</span>,</span><br><span class="line">				backgroundImage = oThis.css(<span class="string">'backgroundImage'</span>).replace(<span class="string">'url('</span>, <span class="string">''</span>).replace(<span class="string">')'</span>, <span class="string">''</span>)</span><br><span class="line">			<span class="keyword">if</span> (oThis[0].tagName == <span class="string">'IMG'</span> &amp;&amp; oThis.attr(<span class="string">'src'</span>)) &#123;</span><br><span class="line">			    src = oThis.attr(<span class="string">'src'</span>)</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (backgroundImage != <span class="string">'none'</span>) &#123;</span><br><span class="line">			    src = backgroundImage</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(!src)&#123;<span class="built_in">return</span> <span class="literal">true</span>&#125;</span><br><span class="line">			_this.imgCount++</span><br><span class="line">			_this.wrapper.append(<span class="string">'&lt;img src='</span> + src + <span class="string">' onload="loadImgforFirstEntry.loaded(this)" onerror="loadImgforFirstEntry.error(this)" /&gt;'</span>)</span><br><span class="line">			src = <span class="string">''</span></span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;,</span><br><span class="line">	error: <span class="keyword">function</span> (e) &#123;</span><br><span class="line">		this.loadedCount++</span><br><span class="line">	    this.done()</span><br><span class="line">	&#125;,</span><br><span class="line">	loaded: <span class="keyword">function</span> (el) &#123;</span><br><span class="line">		<span class="keyword">if</span>($(el)[0].complete)&#123;</span><br><span class="line">			this.loadedCount++</span><br><span class="line">			this.done()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="keyword">done</span>: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		var _this = this,</span><br><span class="line">			count = parseInt(_this.imgCount);</span><br><span class="line">		<span class="keyword">if</span> (_this.loadedCount &gt;= count) &#123;</span><br><span class="line">			_this.loadEnd();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            var percent = parseInt(100 * _this.loadedCount / count);</span><br><span class="line">            _this.rat.html(percent + <span class="string">'%'</span>) // 数字</span><br><span class="line">            _this.progress_bar.css(<span class="string">'width'</span>, (percent) + <span class="string">'%'</span>) // 进度条</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	loadEnd: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		this.rat.html(100 + <span class="string">'%'</span>) // 数字</span><br><span class="line">		this.progress_bar.css(<span class="string">'width'</span>, <span class="string">'100%'</span>) // 进度条</span><br><span class="line">		$(<span class="string">".container"</span>).css(<span class="string">"opacity"</span>, 1);</span><br><span class="line">		myContainer.update();</span><br><span class="line">		this.wrapper.remove()</span><br><span class="line">		$(<span class="string">".loading"</span>).hide();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">loadImgforFirstEntry.init();</span><br><span class="line"></span><br><span class="line">加载JSON写法：</span><br><span class="line"></span><br><span class="line">html:</span><br><span class="line">&lt;!--加载进度显示--&gt;</span><br><span class="line">&lt;div class=<span class="string">"loading"</span>&gt;</span><br><span class="line">	&lt;div class=<span class="string">"loadingMain"</span>&gt;</span><br><span class="line">		&lt;img src=<span class="string">"images/loading_logo.png"</span> class=<span class="string">"abs loading_logo"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">		&lt;img src=<span class="string">"images/loading_img.gif"</span> class=<span class="string">"abs loading_img"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">		&lt;div class=<span class="string">"load_progress_bar abs"</span>&gt;</span><br><span class="line">			&lt;div class=<span class="string">"bar_1 abs"</span>&gt;</span><br><span class="line">				&lt;img src=<span class="string">"images/loading_decor1.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div class=<span class="string">"bar_2 abs"</span>&gt;</span><br><span class="line">				&lt;img src=<span class="string">"images/loading_decor2.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div class=<span class="string">"loading_txt"</span>&gt;&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">/* loading */</span><br><span class="line">.loading&#123;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: <span class="comment">#0e52b4;background-size: cover;z-index: 99;display: none;&#125;</span></span><br><span class="line">.loadingMain&#123;width: 100%;height: 100%;&#125;</span><br><span class="line">.loading_logo&#123;width: 24%;left: 4%;top: 3%;&#125;</span><br><span class="line">.loading_img&#123;width: 30%;top: 23%;left: 0;right: 0;margin: 0 auto;&#125;</span><br><span class="line">.load_progress_bar&#123;width: 50%;height: 1%;top: 50%;left: 0;right: 0;margin: 0 auto;&#125;</span><br><span class="line">.bar_1&#123;width: 100%;height: 100%;left: 0;top: 0;&#125;</span><br><span class="line">.bar_2&#123;width: 0%;height: 100%;left: 0;top: 0;&#125;</span><br><span class="line">.loading_txt&#123;text-align: center;color: <span class="comment">#fff;margin-top: 8%;font-weight: bold;font-size: 0.3rem;&#125;</span></span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">/* 加载loading */</span><br><span class="line">$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">".loading"</span>).show();</span><br><span class="line">    <span class="keyword">function</span> loadRes(datas, index) &#123;</span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">loadSuccess</span></span>() &#123;</span><br><span class="line">            var curLoading = Math.floor((index + 1) / datas.length * 100);</span><br><span class="line">            $(<span class="string">'.loading_txt'</span>).html(curLoading + <span class="string">'%'</span>);</span><br><span class="line">            $(<span class="string">'.bar_2'</span>).css(&#123; <span class="string">'width'</span>: curLoading + <span class="string">'%'</span> &#125;);</span><br><span class="line">            <span class="keyword">if</span> (index &lt; datas.length - 1) &#123;</span><br><span class="line">                loadRes(datas, (index + 1));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (index == datas.length - 1) &#123;</span><br><span class="line">                var hideLoad = setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    loadImg();</span><br><span class="line">                    $(<span class="string">".container"</span>).css(<span class="string">"opacity"</span>, <span class="string">"1"</span>);</span><br><span class="line">                    $(<span class="string">".loading"</span>).hide();</span><br><span class="line">                    clearTimeout(hideLoad);</span><br><span class="line">                &#125;, 100);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (datas[index].<span class="built_in">type</span> == <span class="string">'image'</span>) &#123;</span><br><span class="line">            var image = new Image();</span><br><span class="line">            image.src = cdnBaseUrl + datas[index].src;</span><br><span class="line">            image.onload = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                loadSuccess();</span><br><span class="line">            &#125;</span><br><span class="line">            image.onerror = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                alert(<span class="string">'文件'</span> + datas[index] + <span class="string">'加载失败'</span>);</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="built_in">type</span>: <span class="string">'GET'</span>,</span><br><span class="line">        url: cdnBaseUrl + <span class="string">'js/index.json'</span>,</span><br><span class="line">        dataType: <span class="string">'json'</span>,</span><br><span class="line">        success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">            var i = 0;</span><br><span class="line">            loadRes(data[<span class="string">'index'</span>], i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">loadImg</span></span>() &#123;</span><br><span class="line">        <span class="keyword">function</span> loadRes1(datas, index) &#123;</span><br><span class="line">            <span class="keyword">function</span> <span class="function"><span class="title">loadSuccess1</span></span>() &#123;</span><br><span class="line">                <span class="keyword">if</span> (index &lt; datas.length - 1) &#123;</span><br><span class="line">                    loadRes1(datas, (index + 1));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (datas[index].<span class="built_in">type</span> == <span class="string">'image'</span>) &#123;</span><br><span class="line">                var image = new Image();</span><br><span class="line">                image.src = cdnBaseUrl + datas[index].src;</span><br><span class="line">                image.onload = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    loadSuccess1();</span><br><span class="line">                &#125;</span><br><span class="line">                image.onerror = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    alert(<span class="string">'文件'</span> + datas[index] + <span class="string">'加载失败'</span>);</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            <span class="built_in">type</span>: <span class="string">'GET'</span>,</span><br><span class="line">            url: cdnBaseUrl + <span class="string">'js/img.json'</span>,</span><br><span class="line">            dataType: <span class="string">'json'</span>,</span><br><span class="line">            success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">                var i = 0;</span><br><span class="line">                loadRes1(data[<span class="string">'index'</span>], i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/10/loading%E5%8A%A0%E8%BD%BD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js和ios交互调试接口" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -924,153 +1071,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-mescroll下拉刷新上拉加载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/">mescroll下拉刷新上拉加载</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/" class="archive-article-date">
-  	<time datetime="2020-05-09T08:30:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">1.引入mescroll.css  mescroll.js</span><br><span class="line"></span><br><span class="line">2.html:</span><br><span class="line">    &lt;!--模拟的标题--&gt;</span><br><span class="line">    &lt;!-- &lt;p class=<span class="string">"header"</span>&gt;</span><br><span class="line">    &lt;a class=<span class="string">"btn-left"</span> href=<span class="string">"javascript:;"</span>&gt;main&lt;/a&gt; </span><br><span class="line">    商品列表</span><br><span class="line">    &lt;a class=<span class="string">"btn-right"</span> href=<span class="string">"javascript:;"</span>&gt;list-news&lt;/a&gt;</span><br><span class="line">    &lt;/p&gt; --&gt;</span><br><span class="line">    &lt;!--滑动区域--&gt;</span><br><span class="line">    &lt;div id=<span class="string">"mescroll"</span> class=<span class="string">"mescroll"</span>&gt;</span><br><span class="line">        &lt;!-- &lt;div class=<span class="string">"notice"</span>&gt;</span><br><span class="line">            标题&lt;br /&gt;描述&lt;br /&gt;</span><br><span class="line">        &lt;p class=<span class="string">"btn-change"</span>&gt;模拟后台修改商品信息&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt; --&gt;</span><br><span class="line">        &lt;!--展示上拉加载的数据列表--&gt;</span><br><span class="line">        &lt;ul id=<span class="string">"dataList"</span> class=<span class="string">"data-list"</span>&gt;</span><br><span class="line">            &lt;!-- &lt;li&gt;</span><br><span class="line">                &lt;img class=<span class="string">"pd-img"</span> src=<span class="string">"res/img/pd1.jpg"</span> /&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-name"</span>&gt;商品标题商品标题商品标题商品标题商品标题商品&lt;/p&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-price"</span>&gt;200.00 元&lt;/p&gt;</span><br><span class="line">                &lt;p class=<span class="string">"pd-sold"</span>&gt;已售50件&lt;/p&gt;</span><br><span class="line">            &lt;/li&gt; --&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">3.js</span><br><span class="line">    //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;</span><br><span class="line">    var mescroll = new MeScroll(<span class="string">"mescroll"</span>, &#123;</span><br><span class="line">        up: &#123;</span><br><span class="line">            callback: getListData, //上拉回调,此处可简写; 相当于 callback: <span class="keyword">function</span> (page) &#123; getListData(page); &#125;</span><br><span class="line">            isBounce: <span class="literal">false</span>, //此处禁止ios回弹</span><br><span class="line">            clearEmptyId: <span class="string">"dataList"</span>, //1.下拉刷新时会自动先清空此列表,再加入数据; 2.无任何数据时会在此列表自动提示空</span><br><span class="line">            toTop: &#123; //配置回到顶部按钮</span><br><span class="line">                src: <span class="string">"res/img/mescroll-totop.png"</span>, //默认滚动到1000px显示,可配置offset修改</span><br><span class="line">                //offset : 1000</span><br><span class="line">            &#125;,</span><br><span class="line">            lazyLoad: &#123;</span><br><span class="line">                use: <span class="literal">true</span> // 是否开启懒加载,默认<span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    /*加载列表数据 page = &#123; num: 1, size: 10 &#125;; num:当前页 从1开始, size:每页数据条数 */</span><br><span class="line">    <span class="keyword">function</span> getListData(page) &#123;</span><br><span class="line">        //联网加载数据</span><br><span class="line">        getListDataFromNet(page.num, page.size, <span class="keyword">function</span> (curPageData) &#123;</span><br><span class="line"></span><br><span class="line">            //方法一(推荐): 后台接口有返回列表的总页数 totalPage</span><br><span class="line">            //mescroll.endByPage(curPageData.length, totalPage); //必传参数(当前页的数据个数, 总页数)</span><br><span class="line"></span><br><span class="line">            //方法二(推荐): 后台接口有返回列表的总数据量 totalSize</span><br><span class="line">            mescroll.endBySize(curPageData.modelList.length, curPageData.pageCount); //必传参数(当前页的数据个数, 总数据量)</span><br><span class="line"></span><br><span class="line">            //方法三(推荐): 您有其他方式知道是否有下一页 hasNext</span><br><span class="line">            //mescroll.endSuccess(curPageData.length, hasNext); //必传参数(当前页的数据个数, 是否有下一页<span class="literal">true</span>/<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">            //设置列表数据,因为配置了emptyClearId,第一页会清空dataList的数据,所以setListData应该写在最后;</span><br><span class="line">            setListData(curPageData.modelList);</span><br><span class="line">        &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            //联网失败的回调,隐藏下拉刷新和上拉加载的状态;</span><br><span class="line">            mescroll.endErr();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*设置列表数据*/</span><br><span class="line">    <span class="keyword">function</span> setListData(curPageData) &#123;</span><br><span class="line">        console.log(curPageData)</span><br><span class="line">        var listDom = document.getElementById(<span class="string">"dataList"</span>);</span><br><span class="line">        <span class="keyword">for</span> (var i = 0; i &lt; curPageData.length; i++) &#123;</span><br><span class="line">            var pd = curPageData[i];</span><br><span class="line"></span><br><span class="line">            var str = <span class="string">'&lt;img class="pd-img" src="res/img/logo.png" imgurl="'</span> + pd.titleImageUrl + <span class="string">'"/&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-name"&gt;'</span> + pd.source + <span class="string">'&lt;/p&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-price"&gt;'</span> + pd.type + <span class="string">' 元&lt;/p&gt;'</span>;</span><br><span class="line">            str += <span class="string">'&lt;p class="pd-sold"&gt;已售'</span> + pd.type + <span class="string">'件&lt;/p&gt;'</span>;</span><br><span class="line"></span><br><span class="line">            var liDom = document.createElement(<span class="string">"li"</span>);</span><br><span class="line">            liDom.innerHTML = str;</span><br><span class="line">            listDom.appendChild(liDom);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*加载列表数据 */</span><br><span class="line">    <span class="keyword">function</span> getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                <span class="built_in">type</span>: <span class="string">'GET'</span>,</span><br><span class="line">                url: <span class="string">""</span>,</span><br><span class="line">                data: &#123; <span class="built_in">type</span>: 3, pageNo: pageNum, pageSize: pageSize &#125;,</span><br><span class="line">                dataType: <span class="string">'json'</span>,</span><br><span class="line">                success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">                    console.log(data)</span><br><span class="line">                    successCallback(data.data);</span><br><span class="line">                &#125;,</span><br><span class="line">                error: errorCallback</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, 1000)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mescroll</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/09/mescroll%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vue接口统一管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/vue%E6%8E%A5%E5%8F%A3%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86/">vue接口统一管理</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/vue%E6%8E%A5%E5%8F%A3%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-04-14T08:57:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.api新建index文件夹api.js文件</span><br><span class="line">import &#123;fetchPost&#125; from <span class="string">'../http'</span></span><br><span class="line">const api = &#123;</span><br><span class="line">    /* 登录 */</span><br><span class="line">    loginCheck(params)&#123;</span><br><span class="line">        <span class="built_in">return</span> fetchPost(<span class="string">''</span>, params);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">export</span> default api</span><br><span class="line"></span><br><span class="line">2.main.js</span><br><span class="line">import api from <span class="string">'./api/index/api'</span></span><br><span class="line">Vue.prototype.<span class="variable">$api</span> = api; // 将api挂载到vue得原型上</span><br><span class="line"></span><br><span class="line">3.页面调用</span><br><span class="line">this.<span class="variable">$api</span>.loginCheck(<span class="string">''</span>).<span class="keyword">then</span>(res =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/vue%E6%8E%A5%E5%8F%A3%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">Next</a>
@@ -1159,15 +1159,19 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1179,11 +1183,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swiper</a>
+                <a href="javascript:void(0)" class="js-tag color4">Md5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1191,11 +1195,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
+                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1203,7 +1207,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1235,7 +1239,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
+                <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,7 +1247,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">js split</a>
+                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1255,7 +1259,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sublime Text3</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue .env</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1271,15 +1275,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue .env</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">手机尺寸</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1287,7 +1283,11 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">js split</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VConsole</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1295,7 +1295,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VConsole</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
