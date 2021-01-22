@@ -336,6 +336,154 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js数组扁平化去重排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/22/js%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96%E5%8E%BB%E9%87%8D%E6%8E%92%E5%BA%8F/">js数组扁平化去重排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/22/js%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96%E5%8E%BB%E9%87%8D%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2021-01-22T05:07:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 4, [3, 34, 52, 9, [0, 1, 92]], [19, 22, 3]];</span><br><span class="line"></span><br><span class="line">// 拍平</span><br><span class="line"><span class="keyword">function</span> flat(arr) &#123;</span><br><span class="line">    const isDeep = arr.some(item =&gt; item instanceof Array)</span><br><span class="line">    <span class="keyword">if</span> (!isDeep) &#123;</span><br><span class="line">        <span class="built_in">return</span> arr</span><br><span class="line">    &#125;</span><br><span class="line">    const res = Array.prototype.concat.apply([], arr)</span><br><span class="line">    <span class="built_in">return</span> flat(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 去重</span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    const res = new Set(arr)</span><br><span class="line">    <span class="built_in">return</span> [...res]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 排序</span><br><span class="line"><span class="keyword">function</span> sort(arr) &#123;</span><br><span class="line">    const compare = (a, b) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt; b) <span class="built_in">return</span> -1</span><br><span class="line">        <span class="keyword">if</span> (a &gt; b) <span class="built_in">return</span> 1</span><br><span class="line">        <span class="keyword">if</span> (a === b) <span class="built_in">return</span> 0</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> arr.sort(compare)</span><br><span class="line">&#125;</span><br><span class="line">const res = sort(unique(flat(arr)));</span><br><span class="line"></span><br><span class="line">console.log(res) // [0, 1, 2, 3, 4, 9, 19, 22, 34, 52, 92]</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/22/js%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96%E5%8E%BB%E9%87%8D%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-js实现页面缩放" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/22/js%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%BC%A9%E6%94%BE/">js实现页面缩放</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/22/js%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%BC%A9%E6%94%BE/" class="archive-article-date">
+  	<time datetime="2021-01-22T04:57:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bodyScale</span></span>() &#123;</span><br><span class="line">    var devicewidth = document.documentElement.clientWidth;</span><br><span class="line">    var scale = devicewidth / 1440;  //设计稿的尺寸</span><br><span class="line">    document.body.style.zoom = scale;</span><br><span class="line">&#125;</span><br><span class="line">window.onload = window.onresize = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    bodyScale();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/22/js%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%BC%A9%E6%94%BE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-layui分页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -926,154 +1074,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-cropper图片裁切" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/10/cropper%E5%9B%BE%E7%89%87%E8%A3%81%E5%88%87/">cropper图片裁切</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/10/cropper%E5%9B%BE%E7%89%87%E8%A3%81%E5%88%87/" class="archive-article-date">
-  	<time datetime="2020-07-10T07:18:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/cropper.min.css"</span>/&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/cropper.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"upload_mask"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"upload_box"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"upload_close"</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"upload_pic"</span>&gt;&lt;img class=<span class="string">"tailoringImg"</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"cropperBtnBox"</span>&gt;</span><br><span class="line">            &lt;div class=<span class="string">"cropperBtn"</span>&gt;</span><br><span class="line">                &lt;div class=<span class="string">"scaleBtn"</span>&gt;放大&lt;/div&gt;</span><br><span class="line">                &lt;div class=<span class="string">"zoomBtn"</span>&gt;缩小&lt;/div&gt;</span><br><span class="line">                &lt;div class=<span class="string">"rotateBtn"</span>&gt;旋转&lt;/div&gt;</span><br><span class="line">                &lt;div class=<span class="string">"resetBtn"</span>&gt;复位&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"upload_bot clearfix"</span>&gt;</span><br><span class="line">            &lt;div class=<span class="string">"upload_left fl w50"</span>&gt;&lt;div class=<span class="string">"rel"</span>&gt;上传图片&lt;input <span class="built_in">type</span>=<span class="string">"file"</span> id=<span class="string">"upload_file"</span> accpet=<span class="string">"image/png,image/jpeg,image/jpg,image/bmp"</span>&gt;&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class=<span class="string">"upload_right fr w50"</span>&gt;&lt;div id=<span class="string">"clipBtn"</span>&gt;保存&lt;/div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.upload_mask&#123;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);z-index: 9;display: none;&#125;</span><br><span class="line">.upload_box&#123;width: 8rem;background: <span class="comment">#fff;border-radius: 0.1rem;padding: 0.4rem;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);&#125;</span></span><br><span class="line">.upload_pic&#123;width: 7rem;height: 7rem;background: <span class="comment">#f2f2f2 url("../images/upload_pic.png") no-repeat center center;background-size: 30%;box-shadow: 0 0.1rem 0.1rem #d0d0ce;margin: 0 auto;&#125;</span></span><br><span class="line">.upload_left,.upload_right&#123;height: 0.8rem;&#125;</span><br><span class="line">.upload_left div,.upload_right div&#123;font-size: 0.34rem;color: <span class="comment">#fff;width: 2.6rem;line-height: 0.8rem;background-color: #d31145;text-align: center;border-radius: 5px;-webkit-border-radius: 5px;margin: 0 auto;z-index: 9;&#125;</span></span><br><span class="line">.upload_mask input&#123;position: absolute;left: 0;top: 0;&#125;</span><br><span class="line">.upload_bot&#123;padding-top: 0.4rem;&#125;</span><br><span class="line">.upload_close&#123;width: 0.42rem;height: 0.42rem;background: url(<span class="string">"../images/close.png"</span>) no-repeat center center;background-size: contain;position: absolute;right: -0.6rem;top: 0;&#125;</span><br><span class="line">.cropperBtnBox&#123;display: none;&#125;</span><br><span class="line">.cropperBtn&#123;display: flex;display: -webkit-flex;justify-content: center;-webkit-justify-content: center;padding-top: 0.2rem;&#125;</span><br><span class="line">.cropperBtn div&#123;width: 1rem;font-size: 0.26rem;color: <span class="comment">#fff;line-height: 0.5rem;text-align: center;background-color: #d31145;border-radius: 5px;-webkit-border-radius: 5px;z-index: 9;&#125;</span></span><br><span class="line">.zoomBtn&#123;margin: 0 0.2rem;&#125;</span><br><span class="line">.rotateBtn&#123;margin-right: 0.2rem;&#125;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">$(<span class="string">".add_btn"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    var dataBtn = $(this).attr(<span class="string">"data-btn"</span>);</span><br><span class="line">    $(<span class="string">"#clipBtn"</span>).attr(<span class="string">"class"</span>, dataBtn);</span><br><span class="line">    var dataFile = $(this).attr(<span class="string">"data-file"</span>);</span><br><span class="line">    $(<span class="string">"#upload_file"</span>).attr(<span class="string">"class"</span>, dataFile);</span><br><span class="line">    $(<span class="string">"#upload_file"</span>).val(<span class="string">""</span>);</span><br><span class="line">    $(<span class="string">".tailoringImg"</span>).attr(<span class="string">"src"</span>, <span class="string">""</span>);</span><br><span class="line">    $(<span class="string">".cropper-container"</span>).remove();</span><br><span class="line">    $(<span class="string">".upload_mask"</span>).show();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">".upload_close"</span>).on(<span class="string">"click"</span>, <span class="keyword">function</span> (e) &#123;</span><br><span class="line">    $(<span class="string">".upload_mask"</span>).hide();</span><br><span class="line">    $(<span class="string">".cropperBtnBox"</span>).hide();</span><br><span class="line">    $(<span class="string">"#clipBtn"</span>).attr(<span class="string">"class"</span>, <span class="string">""</span>);</span><br><span class="line">    $(<span class="string">"#upload_file"</span>).attr(<span class="string">"class"</span>, <span class="string">""</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 放大 */</span><br><span class="line">$(<span class="string">".scaleBtn"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">"zoom"</span>, 0.1);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 缩小 */</span><br><span class="line">$(<span class="string">".zoomBtn"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">"zoom"</span>, -0.1);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 旋转 */</span><br><span class="line">$(<span class="string">".rotateBtn"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">"rotate"</span>, 45);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 复位 */</span><br><span class="line">$(<span class="string">".resetBtn"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">"reset"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 图像上传 */</span><br><span class="line"><span class="keyword">function</span> uploadPic(el, el1) &#123;</span><br><span class="line">    $(document).on(<span class="string">"change"</span>, el1, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="keyword">if</span> (!this.files || !this.files[0]) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        var _width = $(el).width();</span><br><span class="line">        var _height = $(el).height();</span><br><span class="line">        console.log(_width / _height);</span><br><span class="line"></span><br><span class="line">        /* cropper图片裁剪 */</span><br><span class="line">        var options = &#123;</span><br><span class="line">            aspectRatio: _width / _height,</span><br><span class="line">            guides: <span class="literal">false</span>, // 裁剪框的虚线(九宫格)</span><br><span class="line">            autoCropArea: 1, // 0-1之间的数值，定义自动剪裁区域的大小，默认0.8</span><br><span class="line">            movable: <span class="literal">false</span>, // 是否允许移动图片</span><br><span class="line">            dragCrop: <span class="literal">false</span>, // 是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域</span><br><span class="line">            movable: <span class="literal">false</span>, // 是否允许移动剪裁框</span><br><span class="line">            resizable: <span class="literal">false</span>, // 是否允许改变裁剪框的大小</span><br><span class="line">            zoomable: <span class="literal">true</span>, // 是否允许缩放图片大小</span><br><span class="line">            mouseWheelZoom: <span class="literal">false</span>, // 是否允许通过鼠标滚轮来缩放图片</span><br><span class="line">            touchDragZoom: <span class="literal">true</span>, // 是否允许通过触摸移动来缩放图片</span><br><span class="line">            rotatable: <span class="literal">true</span>, // 是否允许旋转图片</span><br><span class="line">            modal: <span class="literal">true</span>,</span><br><span class="line">            crop: <span class="keyword">function</span> (e) &#123;</span><br><span class="line">                // 输出结果数据裁剪图像。</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;;</span><br><span class="line">        var reader = new FileReader();</span><br><span class="line">        reader.onload = <span class="keyword">function</span> (evt) &#123;</span><br><span class="line">            var replaceSrc = evt.target.result;</span><br><span class="line">            /* 更换cropper的图片 */</span><br><span class="line">            $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">'destroy'</span>).cropper(options);</span><br><span class="line">            $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">'replace'</span>, replaceSrc, <span class="literal">false</span>); //默认<span class="literal">false</span>，适应高度，不失真</span><br><span class="line">            $(<span class="string">".cropperBtnBox"</span>).show();</span><br><span class="line">        &#125;</span><br><span class="line">        reader.readAsDataURL(this.files[0]);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 图片显示 */</span><br><span class="line"><span class="keyword">function</span> addPic(el, el1, el2) &#123;</span><br><span class="line">    uploadPic(el, el1);</span><br><span class="line"></span><br><span class="line">    /* 裁剪后的处理 */</span><br><span class="line">    $(document).on(<span class="string">"click"</span>, el2, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="string">".tailoringImg"</span>).attr(<span class="string">"src"</span>) == <span class="string">""</span> || $(<span class="string">".tailoringImg"</span>).attr(<span class="string">"src"</span>) == null) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            var cas = $(<span class="string">'.tailoringImg'</span>).cropper(<span class="string">'getCroppedCanvas'</span>); //获取被裁剪后的canvas</span><br><span class="line">            var base64url = cas.toDataURL(<span class="string">'image/png'</span>); //转换为base64地址形式</span><br><span class="line">            $(el).children(<span class="string">"img"</span>).attr(<span class="string">"src"</span>, base64url); //显示为图片的形式</span><br><span class="line">            /*  关闭裁剪框 */</span><br><span class="line">            $(<span class="string">".upload_mask"</span>).hide();</span><br><span class="line">            $(<span class="string">".cropperBtnBox"</span>).hide();</span><br><span class="line">            $(<span class="string">"#clipBtn"</span>).attr(<span class="string">"class"</span>, <span class="string">""</span>);</span><br><span class="line">            $(<span class="string">"#upload_file"</span>).attr(<span class="string">"class"</span>, <span class="string">""</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/10/cropper%E5%9B%BE%E7%89%87%E8%A3%81%E5%88%87/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Sortable拖拽" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/10/Sortable%E6%8B%96%E6%8B%BD/">Sortable拖拽</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/10/Sortable%E6%8B%96%E6%8B%BD/" class="archive-article-date">
-  	<time datetime="2020-07-10T07:13:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/Sortable.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=<span class="string">"swiper-wrapper team_p4wrapper"</span> id=<span class="string">"team_p4Sortable"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"swiper-slide removeSlide"</span>&gt;&lt;img src=<span class="string">"images/team_p4Img1.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"swiper-slide removeSlide"</span>&gt;&lt;img src=<span class="string">"images/team_p4Img2.png"</span> class=<span class="string">"whImg"</span> alt=<span class="string">""</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">css:</span><br><span class="line">.selBg&#123;opacity: 0.7;&#125;</span><br><span class="line"></span><br><span class="line">js：</span><br><span class="line">p4Sort();</span><br><span class="line">var p4Sortable;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">p4Sort</span></span>() &#123;</span><br><span class="line">    p4Sortable = new Sortable(team_p4Sortable, &#123;</span><br><span class="line">        swapThreshold: 1,</span><br><span class="line">        animation: 150,</span><br><span class="line">        delay: 100,</span><br><span class="line">        chosenClass: <span class="string">"selBg"</span>,</span><br><span class="line">        onChoose: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            team_p4swiper.allowTouchMove = <span class="literal">false</span>;</span><br><span class="line">        &#125;,</span><br><span class="line">        onUnchoose: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">            team_p4swiper.allowTouchMove = <span class="literal">true</span>;</span><br><span class="line">            team_p4swiper.update();</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p4Sortable.destroy();</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/10/Sortable%E6%8B%96%E6%8B%BD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next</a>
@@ -1166,6 +1166,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
@@ -1174,15 +1178,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Md5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1198,15 +1194,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1218,10 +1214,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
@@ -1230,7 +1222,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,6 +1243,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">layui</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,10 +1270,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
@@ -1282,15 +1282,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">audio</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VConsole</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">

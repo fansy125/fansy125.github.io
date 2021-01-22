@@ -336,6 +336,154 @@ border-radius: 10px;
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-禁止页面横屏显示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/04/%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%A8%AA%E5%B1%8F%E6%98%BE%E7%A4%BA/">禁止页面横屏显示</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/04/%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%A8%AA%E5%B1%8F%E6%98%BE%E7%A4%BA/" class="archive-article-date">
+  	<time datetime="2019-12-04T08:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="function"><span class="title">rotate</span></span>() &#123;</span><br><span class="line">	var orientation = window.orientation;</span><br><span class="line">	var pd = null;</span><br><span class="line">	<span class="keyword">function</span> <span class="function"><span class="title">createPd</span></span>() &#123;</span><br><span class="line">		<span class="keyword">if</span> (document.getElementById(<span class="string">'preventTran'</span>) === null) &#123;</span><br><span class="line">			var imgData = <span class="string">'提示图片'</span>;</span><br><span class="line">			pd = document.createElement(<span class="string">'div'</span>);</span><br><span class="line">			pd.setAttribute(<span class="string">'id'</span>, <span class="string">'preventTran'</span>);</span><br><span class="line">			pd.style.position = <span class="string">'fixed'</span>;</span><br><span class="line">			pd.style.left = <span class="string">'0'</span>;</span><br><span class="line">			pd.style.top = <span class="string">'0'</span>;</span><br><span class="line">			pd.style.width = <span class="string">'100%'</span>;</span><br><span class="line">			pd.style.height = <span class="string">'100%'</span>;</span><br><span class="line">			pd.style.overflow = <span class="string">'hidden'</span>;</span><br><span class="line">			pd.style.backgroundColor = <span class="string">'#0090da'</span>;</span><br><span class="line">			pd.style.textAlign = <span class="string">'center'</span>;</span><br><span class="line">			pd.style.zIndex = <span class="string">'99999'</span>;</span><br><span class="line">			document.getElementsByTagName(<span class="string">'body'</span>)[0].appendChild(pd);</span><br><span class="line">			var img = document.createElement(<span class="string">'img'</span>);</span><br><span class="line">			img.src = imgData;</span><br><span class="line">			pd.appendChild(img);</span><br><span class="line">			img.style.margin = <span class="string">'60px auto 30px'</span></span><br><span class="line">			var br = document.createElement(<span class="string">'br'</span>);</span><br><span class="line">			var p = document.createElement(<span class="string">'p'</span>);</span><br><span class="line">			p.style.width = <span class="string">'100%'</span>;</span><br><span class="line">			p.style.height = <span class="string">'auto'</span>;</span><br><span class="line">			p.style.fontSize = <span class="string">'22px'</span>;</span><br><span class="line">			p.style.color = <span class="string">'#fff'</span>;</span><br><span class="line">			p.style.fontWeight = <span class="string">'bold'</span>;</span><br><span class="line">			p.style.lineHeight = <span class="string">'34px'</span>;</span><br><span class="line">			p.style.textAlign = <span class="string">'center'</span>;</span><br><span class="line">			p.innerHTML = <span class="string">'为了您的良好体验'</span>;</span><br><span class="line">			p.appendChild(br);</span><br><span class="line">			p.innerHTML += <span class="string">'请将手机/平板竖屏操作'</span>;</span><br><span class="line">			pd.appendChild(p);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (orientation == 90 || orientation == -90) &#123;</span><br><span class="line">		<span class="keyword">if</span> (pd == null &amp;&amp; document.getElementById(<span class="string">'preventTran'</span>) === null) createPd();</span><br><span class="line">		document.getElementById(<span class="string">'preventTran'</span>).style.display = <span class="string">'block'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	window.onorientationchange = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">		<span class="keyword">if</span> (pd == null &amp;&amp; document.getElementById(<span class="string">'preventTran'</span>) == null) createPd();</span><br><span class="line">		document.getElementById(<span class="string">'preventTran'</span>).style.display = <span class="string">'none'</span>;</span><br><span class="line">		rotate();</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/04/%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%A8%AA%E5%B1%8F%E6%98%BE%E7%A4%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-input输入框密码星号显示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/04/input%E8%BE%93%E5%85%A5%E6%A1%86%E5%AF%86%E7%A0%81%E6%98%9F%E5%8F%B7%E6%98%BE%E7%A4%BA/">input输入框密码*显示</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/04/input%E8%BE%93%E5%85%A5%E6%A1%86%E5%AF%86%E7%A0%81%E6%98%9F%E5%8F%B7%E6%98%BE%E7%A4%BA/" class="archive-article-date">
+  	<time datetime="2019-12-04T06:58:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> placeholder=<span class="string">"请输入ISP密码"</span> class=<span class="string">"ispPsd"</span>&gt;</span><br><span class="line">&lt;i class=<span class="string">"fa fa-eye-slash eyes"</span> aria-hidden=<span class="string">"true"</span>&gt;&lt;/i&gt;</span><br><span class="line"></span><br><span class="line">js:</span><br><span class="line">/* 密码变星号 */</span><br><span class="line">var psdStr = <span class="string">""</span></span><br><span class="line">$(<span class="string">".ispPsd"</span>).keyup(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    value = $(this).val();</span><br><span class="line">    <span class="keyword">if</span> (value.length &gt;= psdStr.length) &#123;</span><br><span class="line">        psdStr += value.substr(psdStr.length, value.length - psdStr.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        psdStr = psdStr.substr(0, value.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ($(<span class="string">".eyes"</span>).hasClass(<span class="string">"fa-eye-slash"</span>)) &#123;</span><br><span class="line">        $(this).val(value.replace(/./g, <span class="string">"*"</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        $(this).val(value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/* 密码明文 */</span><br><span class="line">$(<span class="string">".eyes"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    <span class="keyword">if</span> ($(this).hasClass(<span class="string">"fa-eye-slash"</span>)) &#123;</span><br><span class="line">        $(<span class="string">".eyes"</span>).removeClass(<span class="string">"fa-eye-slash"</span>);</span><br><span class="line">        $(<span class="string">".eyes"</span>).addClass(<span class="string">"fa-eye"</span>);</span><br><span class="line">        $(<span class="string">".ispPsd"</span>).val(psdStr);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> ($(this).hasClass(<span class="string">"fa-eye"</span>)) &#123;</span><br><span class="line">        $(<span class="string">".eyes"</span>).removeClass(<span class="string">"fa-eye"</span>);</span><br><span class="line">        $(<span class="string">".eyes"</span>).addClass(<span class="string">"fa-eye-slash"</span>);</span><br><span class="line">        $(<span class="string">".ispPsd"</span>).val(value.replace(/./g, <span class="string">"*"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/04/input%E8%BE%93%E5%85%A5%E6%A1%86%E5%AF%86%E7%A0%81%E6%98%9F%E5%8F%B7%E6%98%BE%E7%A4%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js时间格式转换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -925,153 +1073,6 @@ border-radius: 10px;
 
 
   
-    <article id="post-wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/wordpress%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">wordpress搭建博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/29/wordpress%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-10-29T06:57:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src="/img/wordpress1.jpg" alt="image"><br><img src="/img/wordpress2.jpg" alt="image"><br><img src="/img/wordpress3.jpg" alt="image"><br><img src="/img/wordpress4.jpg" alt="image"><br><img src="/img/wordpress5.jpg" alt="image"><br><img src="/img/wordpress6.jpg" alt="image"><br><img src="/img/wordpress7.jpg" alt="image"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">wordpress</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/wordpress%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-截取url中的某个字符串后面的值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/%E6%88%AA%E5%8F%96url%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%90%8E%E9%9D%A2%E7%9A%84%E5%80%BC/">截取url中的某个字符串后面的值</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/29/%E6%88%AA%E5%8F%96url%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%90%8E%E9%9D%A2%E7%9A%84%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2019-10-29T06:45:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getParameterByName(name) &#123;</span><br><span class="line">	name = name.replace(/[\[]/, <span class="string">"\\\["</span>).replace(/[\]]/, <span class="string">"\\\]"</span>);</span><br><span class="line">	var regex = new RegExp(<span class="string">"[\\?&amp;]"</span> + name + <span class="string">"=([^&amp;#]*)"</span>),</span><br><span class="line">		results = regex.exec(location.search);</span><br><span class="line">	<span class="built_in">return</span> results == null ? <span class="string">""</span> : decodeURIComponent(results[1]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/%E6%88%AA%E5%8F%96url%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%90%8E%E9%9D%A2%E7%9A%84%E5%80%BC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/7/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/">Next</a>
@@ -1164,6 +1165,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JsonBird</a>
               </li>
              
@@ -1172,15 +1177,7 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Md5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PhotoClip</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1196,15 +1193,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">clipboard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1216,10 +1213,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">html input</a>
               </li>
              
@@ -1228,7 +1221,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">html2canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">lottie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1241,6 +1242,10 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">layui</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1264,10 +1269,6 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">谷歌插件</a>
               </li>
              
@@ -1280,15 +1281,15 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mescroll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">audio</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VConsole</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wordpress</a>
               </li>
              
               <li class="article-tag-list-item">
